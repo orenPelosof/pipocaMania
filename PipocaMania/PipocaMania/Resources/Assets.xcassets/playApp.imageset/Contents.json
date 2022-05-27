@@ -1,11 +1,11 @@
 {
   "images" : [
     {
-      "filename" : "playApp.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "playApp.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
