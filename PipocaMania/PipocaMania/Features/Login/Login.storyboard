@@ -19,7 +19,7 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cah-I4-Xe6">
                                 <rect key="frame" x="107" y="424" width="200" height="48"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" red="0.97254901960784312" green="0.39215686274509803" blue="0.29411764705882354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="Kje-vp-wBT"/>
                                     <constraint firstAttribute="width" constant="200" id="zV6-ZO-6EJ"/>
@@ -35,6 +35,9 @@
                                 <rect key="frame" x="36" y="203" width="343" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="emailTextField:" destination="DkH-if-C1y" eventType="editingDidEnd" id="6CW-Vp-QmZ"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="D3D-sU-zYb">
                                 <rect key="frame" x="36" y="282" width="342" height="34"/>
@@ -65,7 +68,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Iqi-z3-Nsb"/>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.082352941176470587" green="0.078431372549019607" blue="0.12156862745098039" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="K6z-M6-sDV" firstAttribute="leading" secondItem="Iqi-z3-Nsb" secondAttribute="leading" constant="54" id="2JZ-7p-W0f"/>
                             <constraint firstItem="K6z-M6-sDV" firstAttribute="top" secondItem="Iqi-z3-Nsb" secondAttribute="top" constant="124" id="4dA-dk-C9D"/>
@@ -88,6 +91,10 @@
                             <constraint firstItem="Iqi-z3-Nsb" firstAttribute="trailing" secondItem="UsM-Gm-M5X" secondAttribute="trailing" constant="35" id="uLd-XF-HNJ"/>
                             <constraint firstItem="Iqi-z3-Nsb" firstAttribute="trailing" secondItem="D3D-sU-zYb" secondAttribute="trailing" constant="36" id="xoO-gj-1uN"/>
                         </constraints>
+                        <connections>
+                            <outlet property="textFieldEmail" destination="UsM-Gm-M5X" id="QK1-Az-7Uu"/>
+                            <outlet property="textFieldSenha" destination="D3D-sU-zYb" id="D9c-Qd-TT5"/>
+                        </connections>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tYj-yP-YJw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
