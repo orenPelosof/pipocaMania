@@ -1,28 +1,76 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vgw-E2-sZ3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vgw-E2-sZ3">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Filter-->
         <scene sceneID="7ck-OL-tpd">
             <objects>
-                <viewController title="Filter" id="CX5-bt-TjC" sceneMemberID="viewController">
+                <viewController title="Filter" id="CX5-bt-TjC" customClass="FilterViewController" customModule="PipocaMania" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AfI-Tf-06D">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="00k-2P-Bbi" userLabel="pesquisaTextField">
+                                <rect key="frame" x="44" y="150" width="326" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                                <imageReference key="background" image="magnifyingglass" catalog="system" symbolScale="large"/>
+                            </textField>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="KFT-oV-FlZ">
+                                <rect key="frame" x="44" y="208" width="326" height="24"/>
+                                <color key="backgroundColor" red="0.97438901659999999" green="0.39268863199999998" blue="0.29542246459999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="23" id="gHt-AM-Kof"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Filmes"/>
+                                    <segment title="Séries"/>
+                                </segments>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="selectedSegmentTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </variation>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="headTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OFu-2d-UCs">
+                                <rect key="frame" x="265" y="121" width="110" height="19"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="19" id="Y1f-eY-uMv"/>
+                                    <constraint firstAttribute="width" constant="110" id="uVG-pI-40Q"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Categorias" subtitle="">
+                                    <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="eXh-4E-c4O"/>
-                        <color key="backgroundColor" systemColor="systemBlueColor"/>
+                        <color key="backgroundColor" red="0.082352941176470587" green="0.078431372549019607" blue="0.12156862745098039" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="eXh-4E-c4O" firstAttribute="trailing" secondItem="KFT-oV-FlZ" secondAttribute="trailing" constant="44" id="J6B-h1-bcI"/>
+                            <constraint firstItem="KFT-oV-FlZ" firstAttribute="top" secondItem="00k-2P-Bbi" secondAttribute="bottom" constant="24" id="Oud-ai-mzA"/>
+                            <constraint firstItem="00k-2P-Bbi" firstAttribute="top" secondItem="OFu-2d-UCs" secondAttribute="bottom" constant="10" id="PS0-f0-nMz"/>
+                            <constraint firstItem="00k-2P-Bbi" firstAttribute="leading" secondItem="eXh-4E-c4O" secondAttribute="leading" constant="44" id="QRN-OH-w0K"/>
+                            <constraint firstItem="00k-2P-Bbi" firstAttribute="top" secondItem="AfI-Tf-06D" secondAttribute="topMargin" constant="10" id="gYf-7s-RfA"/>
+                            <constraint firstItem="eXh-4E-c4O" firstAttribute="trailing" secondItem="00k-2P-Bbi" secondAttribute="trailing" constant="44" id="j1h-8D-bei"/>
+                            <constraint firstItem="KFT-oV-FlZ" firstAttribute="leading" secondItem="eXh-4E-c4O" secondAttribute="leading" constant="44" id="pek-Jb-564"/>
+                            <constraint firstItem="KFT-oV-FlZ" firstAttribute="centerX" secondItem="00k-2P-Bbi" secondAttribute="centerX" id="xdb-Qq-jub"/>
+                            <constraint firstItem="eXh-4E-c4O" firstAttribute="trailing" secondItem="OFu-2d-UCs" secondAttribute="trailing" constant="39" id="yih-J9-YLY"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Filter" id="GVz-j9-mKJ"/>
+                    <navigationItem key="navigationItem" title="Buscar filmes" id="GVz-j9-mKJ"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SJn-D1-Aaa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1215.9420289855072" y="91.741071428571431"/>
+            <point key="canvasLocation" x="1214.4927536231885" y="91.741071428571431"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="a4C-H1-V12">
@@ -31,9 +79,17 @@
                     <tabBarItem key="tabBarItem" title="" image="playApp" id="qjt-Xs-6mz"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="LmC-1Q-FVb">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" largeTitles="YES" id="LmC-1Q-FVb">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                            <offsetWrapper key="textShadowOffset" horizontal="0.0" vertical="0.0"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                            <color key="textColor" red="0.97254901960784312" green="0.39215686274509803" blue="0.29411764705882354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -46,9 +102,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="playApp" width="35" height="32"/>
-        <systemColor name="systemBlueColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
     </resources>
 </document>
