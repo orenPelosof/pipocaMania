@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="HeaderProfileTableViewCell" rowHeight="150" id="Am8-rW-pD1" customClass="HeaderProfileTableViewCell" customModule="PipocaMania" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="383" height="150"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Am8-rW-pD1" id="Snd-e1-s2F">
+                <rect key="frame" x="0.0" y="0.0" width="383" height="150"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Perfil Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Swb-HC-gdN">
+                        <rect key="frame" x="91.5" y="110.5" width="200" height="20.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="200" id="mFb-x4-bP0"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="perfil" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="me2-ju-RmL">
+                        <rect key="frame" x="151.5" y="8" width="80" height="80"/>
+                        <color key="backgroundColor" red="0.64332726880000002" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="80" id="dWW-TA-8fN"/>
+                            <constraint firstAttribute="width" constant="80" id="wNA-77-5tB"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Swb-HC-gdN" firstAttribute="centerX" secondItem="Snd-e1-s2F" secondAttribute="centerX" id="1J8-Xp-c4K"/>
+                    <constraint firstItem="me2-ju-RmL" firstAttribute="centerX" secondItem="Swb-HC-gdN" secondAttribute="centerX" id="GLb-6G-6VE"/>
+                    <constraint firstItem="me2-ju-RmL" firstAttribute="top" secondItem="Snd-e1-s2F" secondAttribute="top" constant="8" id="HAU-7e-sdQ"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="Swb-HC-gdN" secondAttribute="bottom" constant="8" id="kjC-68-NwB"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="profileImageView" destination="me2-ju-RmL" id="NIv-GG-TD3"/>
+                <outlet property="profileName" destination="Swb-HC-gdN" id="0Ke-zJ-zWJ"/>
+            </connections>
+            <point key="canvasLocation" x="102.17391304347827" y="84.375"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="perfil" width="256" height="256"/>
+    </resources>
+</document>

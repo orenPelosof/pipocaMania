@@ -4,44 +4,50 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Profile-->
         <scene sceneID="H66-fg-fJB">
             <objects>
-                <viewController title="Profile" id="3PH-2n-G7i" sceneMemberID="viewController">
+                <viewController title="Profile" id="3PH-2n-G7i" customClass="ProfileViewController" customModule="PipocaMania" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YmQ-EC-3vt">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="66d-7o-CnB">
-                                <rect key="frame" x="107" y="424" width="200" height="48"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="48" id="JZu-FU-kj8"/>
-                                    <constraint firstAttribute="width" constant="200" id="jLJ-7s-crD"/>
-                                </constraints>
-                                <color key="tintColor" systemColor="systemYellowColor"/>
-                                <state key="normal" title="Login"/>
-                                <connections>
-                                    <segue destination="N6r-wA-7qg" kind="show" id="7TK-1J-iT9"/>
-                                </connections>
-                            </button>
+                            <tableView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6Sa-pR-btG">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
+                                <color key="backgroundColor" red="0.08235294118" green="0.078431372550000003" blue="0.1215686275" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                <color key="sectionIndexBackgroundColor" red="0.08235294118" green="0.078431372550000003" blue="0.1215686275" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="66d-7o-CnB">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="42"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" red="0.08235294118" green="0.078431372550000003" blue="0.1215686275" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                    <color key="tintColor" red="0.97254901959999995" green="0.3921568627" blue="0.29411764709999999" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                    <state key="normal" title="Novo por aqui? Registre-se"/>
+                                    <connections>
+                                        <segue destination="N6r-wA-7qg" kind="show" id="7TK-1J-iT9"/>
+                                    </connections>
+                                </button>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="VVA-Qf-50U"/>
-                        <color key="backgroundColor" systemColor="systemRedColor"/>
+                        <color key="backgroundColor" red="0.08235294118" green="0.078431372550000003" blue="0.1215686275" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="66d-7o-CnB" firstAttribute="centerY" secondItem="YmQ-EC-3vt" secondAttribute="centerY" id="RZ0-ZZ-h4T"/>
-                            <constraint firstItem="66d-7o-CnB" firstAttribute="centerX" secondItem="YmQ-EC-3vt" secondAttribute="centerX" id="nne-5m-4Kb"/>
+                            <constraint firstItem="6Sa-pR-btG" firstAttribute="trailing" secondItem="VVA-Qf-50U" secondAttribute="trailing" id="IKb-fw-Mvm"/>
+                            <constraint firstItem="6Sa-pR-btG" firstAttribute="top" secondItem="VVA-Qf-50U" secondAttribute="top" id="LC8-Sb-6s2"/>
+                            <constraint firstItem="6Sa-pR-btG" firstAttribute="leading" secondItem="VVA-Qf-50U" secondAttribute="leading" id="MWS-LX-tpJ"/>
+                            <constraint firstItem="6Sa-pR-btG" firstAttribute="bottom" secondItem="VVA-Qf-50U" secondAttribute="bottom" id="cdS-qK-bdB"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Profile" id="dxG-ng-17A"/>
+                    <connections>
+                        <outlet property="ProfileTableView" destination="6Sa-pR-btG" id="B2G-gy-qJg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yM8-jp-6C5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1200" y="116.51785714285714"/>
+            <point key="canvasLocation" x="1198.5507246376812" y="116.51785714285714"/>
         </scene>
         <!--Login-->
         <scene sceneID="Pb2-JW-xXo">
@@ -56,13 +62,18 @@
         <!--Navigation Controller-->
         <scene sceneID="MYd-IN-a5n">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="JGc-g3-R22" sceneMemberID="viewController">
+                <navigationController id="JGc-g3-R22" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="UserApp" id="7HL-yI-PC0"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="J0o-Vo-lXE">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="J0o-Vo-lXE">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.08235294118" green="0.078431372550000003" blue="0.1215686275" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                            <color key="textColor" red="0.97254901959999995" green="0.3921568627" blue="0.29411764709999999" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -76,11 +87,5 @@
     </scenes>
     <resources>
         <image name="UserApp" width="32" height="29.5"/>
-        <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemYellowColor">
-            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
     </resources>
 </document>
