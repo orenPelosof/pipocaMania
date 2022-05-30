@@ -5,6 +5,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -18,12 +19,13 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cah-I4-Xe6">
                                 <rect key="frame" x="107" y="424" width="200" height="48"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="Kje-vp-wBT"/>
                                     <constraint firstAttribute="width" constant="200" id="zV6-ZO-6EJ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
-                                <color key="tintColor" red="0.97254901960784312" green="0.39215686274509803" blue="0.29411764705882354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" systemColor="systemBackgroundColor"/>
                                 <state key="normal" title="ENTRAR"/>
                                 <connections>
                                     <segue destination="Z7W-KF-k6T" kind="show" id="eCj-bZ-lfc"/>
@@ -61,15 +63,9 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Continue with Google"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IFP-t3-jcu">
-                                <rect key="frame" x="98" y="76" width="218" height="46"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="28"/>
-                                <color key="tintColor" red="0.97254901959999995" green="0.3921568627" blue="0.29411764709999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="PIPOCA MANIA"/>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Iqi-z3-Nsb"/>
-                        <color key="backgroundColor" red="0.082352941176470587" green="0.078431372549019607" blue="0.12156862745098039" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="K6z-M6-sDV" firstAttribute="leading" secondItem="Iqi-z3-Nsb" secondAttribute="leading" constant="54" id="2JZ-7p-W0f"/>
                             <constraint firstItem="K6z-M6-sDV" firstAttribute="top" secondItem="Iqi-z3-Nsb" secondAttribute="top" constant="124" id="4dA-dk-C9D"/>
@@ -85,13 +81,10 @@
                             <constraint firstItem="Iqi-z3-Nsb" firstAttribute="trailing" secondItem="iha-BP-Wtb" secondAttribute="trailing" constant="79" id="XO7-J4-c2B"/>
                             <constraint firstItem="iha-BP-Wtb" firstAttribute="leading" secondItem="Iqi-z3-Nsb" secondAttribute="leading" constant="79" id="Zd5-FW-ram"/>
                             <constraint firstItem="D3D-sU-zYb" firstAttribute="leading" secondItem="Iqi-z3-Nsb" secondAttribute="leading" constant="36" id="a3a-mn-p9h"/>
-                            <constraint firstItem="Iqi-z3-Nsb" firstAttribute="trailing" secondItem="IFP-t3-jcu" secondAttribute="trailing" constant="98" id="avu-6j-vqF"/>
                             <constraint firstItem="Iqi-z3-Nsb" firstAttribute="trailing" secondItem="ANf-f1-XqL" secondAttribute="trailing" constant="122" id="fJR-em-4m1"/>
-                            <constraint firstItem="IFP-t3-jcu" firstAttribute="top" secondItem="Iqi-z3-Nsb" secondAttribute="top" constant="32" id="fUN-Fc-BAc"/>
                             <constraint firstItem="UsM-Gm-M5X" firstAttribute="top" secondItem="Iqi-z3-Nsb" secondAttribute="top" constant="159" id="kbF-ke-ikA"/>
                             <constraint firstItem="Iqi-z3-Nsb" firstAttribute="trailing" secondItem="K6z-M6-sDV" secondAttribute="trailing" constant="122" id="lxE-Ir-lXI"/>
                             <constraint firstItem="ANf-f1-XqL" firstAttribute="top" secondItem="UsM-Gm-M5X" secondAttribute="bottom" constant="9" id="oo9-Xb-9Yf"/>
-                            <constraint firstItem="IFP-t3-jcu" firstAttribute="leading" secondItem="Iqi-z3-Nsb" secondAttribute="leading" constant="98" id="s3n-pd-hHS"/>
                             <constraint firstItem="Iqi-z3-Nsb" firstAttribute="trailing" secondItem="UsM-Gm-M5X" secondAttribute="trailing" constant="35" id="uLd-XF-HNJ"/>
                             <constraint firstItem="Iqi-z3-Nsb" firstAttribute="trailing" secondItem="D3D-sU-zYb" secondAttribute="trailing" constant="36" id="xoO-gj-1uN"/>
                         </constraints>
@@ -99,7 +92,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tYj-yP-YJw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="228.98550724637684" y="95.758928571428569"/>
+            <point key="canvasLocation" x="229" y="96"/>
         </scene>
         <!--SignUp-->
         <scene sceneID="p4f-d6-bgE">
@@ -112,4 +105,9 @@
             <point key="canvasLocation" x="934" y="96"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
