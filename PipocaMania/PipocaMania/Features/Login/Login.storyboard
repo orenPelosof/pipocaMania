@@ -12,7 +12,7 @@
         <!--Login-->
         <scene sceneID="E44-CI-0fe">
             <objects>
-                <viewController title="Login" id="lyK-ka-u2y" sceneMemberID="viewController">
+                <viewController title="Login" id="lyK-ka-u2y" customClass="TelaDeLogin" customModule="PipocaMania" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DkH-if-C1y">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -28,21 +28,22 @@
                                 <color key="tintColor" systemColor="systemBackgroundColor"/>
                                 <state key="normal" title="ENTRAR"/>
                                 <connections>
+                                    <action selector="enterButtonAction:" destination="DkH-if-C1y" eventType="touchUpInside" id="VHh-gO-gnQ"/>
                                     <segue destination="Z7W-KF-k6T" kind="show" id="eCj-bZ-lfc"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UsM-Gm-M5X">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UsM-Gm-M5X">
                                 <rect key="frame" x="36" y="203" width="343" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
                                 <connections>
                                     <action selector="emailTextField:" destination="DkH-if-C1y" eventType="editingDidEnd" id="6CW-Vp-QmZ"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="D3D-sU-zYb">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Senha" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="D3D-sU-zYb">
                                 <rect key="frame" x="36" y="282" width="342" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="E-mail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K6z-M6-sDV">
                                 <rect key="frame" x="54" y="168" width="238" height="28"/>
@@ -66,6 +67,18 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Continue with Google"/>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pipoca Mania" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HcS-nD-L1v">
+                                <rect key="frame" x="25" y="82" width="364" height="40"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                <color key="textColor" red="0.90196073060000004" green="0.42745098469999998" blue="0.32941177490000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="google" translatesAutoresizingMaskIntoConstraints="NO" id="PJh-tm-EIV">
+                                <rect key="frame" x="84" y="613" width="28" height="27"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="facebook" translatesAutoresizingMaskIntoConstraints="NO" id="xTo-9B-aeS">
+                                <rect key="frame" x="85" y="558" width="27" height="25"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Iqi-z3-Nsb"/>
                         <color key="backgroundColor" red="0.082352941176470587" green="0.078431372549019607" blue="0.12156862745098039" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -76,10 +89,14 @@
                             <constraint firstItem="Iqi-z3-Nsb" firstAttribute="trailing" secondItem="efU-jy-T2k" secondAttribute="trailing" constant="79" id="7DE-KX-LlL"/>
                             <constraint firstItem="cah-I4-Xe6" firstAttribute="centerX" secondItem="DkH-if-C1y" secondAttribute="centerX" id="7QH-HN-M2W"/>
                             <constraint firstItem="efU-jy-T2k" firstAttribute="top" secondItem="iha-BP-Wtb" secondAttribute="bottom" constant="25" id="9Uc-55-MPA"/>
+                            <constraint firstItem="HcS-nD-L1v" firstAttribute="leading" secondItem="Iqi-z3-Nsb" secondAttribute="leading" constant="25" id="B1T-Pf-RBl"/>
                             <constraint firstItem="D3D-sU-zYb" firstAttribute="top" secondItem="UsM-Gm-M5X" secondAttribute="bottom" constant="45" id="E1g-cK-s1n"/>
+                            <constraint firstItem="HcS-nD-L1v" firstAttribute="top" secondItem="Iqi-z3-Nsb" secondAttribute="top" constant="38" id="Ed4-zx-Tfg"/>
                             <constraint firstItem="efU-jy-T2k" firstAttribute="leading" secondItem="Iqi-z3-Nsb" secondAttribute="leading" constant="79" id="FLj-8m-AOZ"/>
                             <constraint firstItem="iha-BP-Wtb" firstAttribute="top" secondItem="cah-I4-Xe6" secondAttribute="bottom" constant="83" id="Mtl-0i-Bj8"/>
+                            <constraint firstItem="PJh-tm-EIV" firstAttribute="bottom" secondItem="efU-jy-T2k" secondAttribute="bottom" id="N8H-K1-KF1"/>
                             <constraint firstItem="UsM-Gm-M5X" firstAttribute="leading" secondItem="Iqi-z3-Nsb" secondAttribute="leading" constant="36" id="T8p-aE-QcX"/>
+                            <constraint firstItem="xTo-9B-aeS" firstAttribute="bottom" secondItem="iha-BP-Wtb" secondAttribute="bottom" id="Tb6-kB-qj0"/>
                             <constraint firstItem="cah-I4-Xe6" firstAttribute="centerY" secondItem="DkH-if-C1y" secondAttribute="centerY" id="VL8-Ps-7AX"/>
                             <constraint firstItem="Iqi-z3-Nsb" firstAttribute="trailing" secondItem="iha-BP-Wtb" secondAttribute="trailing" constant="79" id="XO7-J4-c2B"/>
                             <constraint firstItem="iha-BP-Wtb" firstAttribute="leading" secondItem="Iqi-z3-Nsb" secondAttribute="leading" constant="79" id="Zd5-FW-ram"/>
@@ -89,9 +106,13 @@
                             <constraint firstItem="Iqi-z3-Nsb" firstAttribute="trailing" secondItem="K6z-M6-sDV" secondAttribute="trailing" constant="122" id="lxE-Ir-lXI"/>
                             <constraint firstItem="ANf-f1-XqL" firstAttribute="top" secondItem="UsM-Gm-M5X" secondAttribute="bottom" constant="9" id="oo9-Xb-9Yf"/>
                             <constraint firstItem="Iqi-z3-Nsb" firstAttribute="trailing" secondItem="UsM-Gm-M5X" secondAttribute="trailing" constant="35" id="uLd-XF-HNJ"/>
+                            <constraint firstItem="Iqi-z3-Nsb" firstAttribute="trailing" secondItem="HcS-nD-L1v" secondAttribute="trailing" constant="25" id="vAt-EN-xJJ"/>
                             <constraint firstItem="Iqi-z3-Nsb" firstAttribute="trailing" secondItem="D3D-sU-zYb" secondAttribute="trailing" constant="36" id="xoO-gj-1uN"/>
                         </constraints>
                         <connections>
+                            <outlet property="buttonEntrar" destination="cah-I4-Xe6" id="KR0-WW-24m"/>
+                            <outlet property="emailTextField" destination="UsM-Gm-M5X" id="wqr-T6-sE6"/>
+                            <outlet property="senhaTextField" destination="D3D-sU-zYb" id="mCs-Dt-jB2"/>
                             <outlet property="textFieldEmail" destination="UsM-Gm-M5X" id="QK1-Az-7Uu"/>
                             <outlet property="textFieldSenha" destination="D3D-sU-zYb" id="D9c-Qd-TT5"/>
                         </connections>
@@ -99,7 +120,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tYj-yP-YJw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="229" y="96"/>
+            <point key="canvasLocation" x="228.98550724637684" y="95.758928571428569"/>
         </scene>
         <!--SignUp-->
         <scene sceneID="p4f-d6-bgE">
@@ -113,6 +134,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="facebook" width="512" height="512"/>
+        <image name="google" width="512" height="512"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
