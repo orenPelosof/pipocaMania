@@ -22,7 +22,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     self.senhaTextField.delegate = self
         }
     
- //Botao entrar e capturar dados dos textfields
+ //Botao entrar para navegar para a proxima pagina
+    
     @IBAction func enterButtonAction(_ sender: Any) {
         let email: String? = self.emailTextField.text
         let senha: String? = self.senhaTextField.text
@@ -40,7 +41,16 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         }
         return true
     }
-   
+    
+    //Botao Registrar caso o usuario queira entrar no app e nao tenha um cadastro.
+    
+    @IBAction func registerButton(_ sender: Any) {
+        let email: String? = self.emailTextField.text
+        let senha: String? = self.senhaTextField.text
+        
+//print concatenando os dados do user e printando
+        print("dados de login do user: email:\(email)passworld:\(senha)")
+    }
 }
 
 
