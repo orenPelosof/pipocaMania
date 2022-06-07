@@ -8,7 +8,8 @@
 import Foundation
 import UIKit
 
-class TelaDeLogin: UIViewController, UITextFieldDelegate {
+class LoginViewController: UIViewController, UITextFieldDelegate {
+    
     
     
     @IBOutlet weak var emailTextField: UITextField!
@@ -19,10 +20,9 @@ class TelaDeLogin: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
     self.emailTextField.delegate = self
     self.senhaTextField.delegate = self
-        
-    }
- //Botao entrar e capturar dados dos textfields
+        }
     
+ //Botao entrar e capturar dados dos textfields
     @IBAction func enterButtonAction(_ sender: Any) {
         let email: String? = self.emailTextField.text
         let senha: String? = self.senhaTextField.text
