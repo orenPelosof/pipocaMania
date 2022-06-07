@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -12,67 +13,30 @@
             <objects>
                 <viewController title="Profile" id="3PH-2n-G7i" customClass="ProfileViewController" customModule="PipocaMania" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YmQ-EC-3vt">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6Sa-pR-btG">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
-                                <color key="backgroundColor" red="0.08235294118" green="0.078431372550000003" blue="0.1215686275" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
-                                <color key="sectionIndexBackgroundColor" red="0.08235294118" green="0.078431372550000003" blue="0.1215686275" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
-                                <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="66d-7o-CnB">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="42"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <color key="backgroundColor" red="0.08235294118" green="0.078431372550000003" blue="0.1215686275" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
-                                    <color key="tintColor" red="0.97254901959999995" green="0.3921568627" blue="0.29411764709999999" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
-                                    <state key="normal" title="Novo por aqui? Registre-se"/>
-                                    <connections>
-                                        <segue destination="N6r-wA-7qg" kind="show" id="7TK-1J-iT9"/>
-                                    </connections>
-                                </button>
-                            </tableView>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="VVA-Qf-50U"/>
                         <color key="backgroundColor" red="0.08235294118" green="0.078431372550000003" blue="0.1215686275" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstItem="6Sa-pR-btG" firstAttribute="trailing" secondItem="VVA-Qf-50U" secondAttribute="trailing" id="IKb-fw-Mvm"/>
-                            <constraint firstItem="6Sa-pR-btG" firstAttribute="top" secondItem="VVA-Qf-50U" secondAttribute="top" id="LC8-Sb-6s2"/>
-                            <constraint firstItem="6Sa-pR-btG" firstAttribute="leading" secondItem="VVA-Qf-50U" secondAttribute="leading" id="MWS-LX-tpJ"/>
-                            <constraint firstItem="6Sa-pR-btG" firstAttribute="bottom" secondItem="VVA-Qf-50U" secondAttribute="bottom" id="cdS-qK-bdB"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Profile" id="dxG-ng-17A"/>
-                    <connections>
-                        <outlet property="ProfileTableView" destination="6Sa-pR-btG" id="B2G-gy-qJg"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yM8-jp-6C5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1198.5507246376812" y="116.51785714285714"/>
         </scene>
-        <!--Login-->
-        <scene sceneID="Pb2-JW-xXo">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Login" id="N6r-wA-7qg" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="Jd5-K1-43R"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Gaf-BW-vUX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1847.1014492753625" y="116.51785714285714"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="MYd-IN-a5n">
             <objects>
-                <navigationController id="JGc-g3-R22" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="JGc-g3-R22" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="UserApp" id="7HL-yI-PC0"/>
                     <toolbarItems/>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="J0o-Vo-lXE">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.08235294118" green="0.078431372550000003" blue="0.1215686275" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" name="primary"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
-                            <color key="textColor" red="0.97254901959999995" green="0.3921568627" blue="0.29411764709999999" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                            <color key="textColor" name="secondary"/>
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -87,5 +51,11 @@
     </scenes>
     <resources>
         <image name="UserApp" width="32" height="29.5"/>
+        <namedColor name="primary">
+            <color red="0.082352941176470587" green="0.078431372549019607" blue="0.12156862745098039" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="secondary">
+            <color red="0.97254901960784312" green="0.39215686274509803" blue="0.29411764705882354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>

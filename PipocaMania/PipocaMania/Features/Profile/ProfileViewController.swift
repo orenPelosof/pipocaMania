@@ -1,59 +1,40 @@
-//
-//  ProfileViewController.swift
-//  PipocaMania
-//
-//  Created by Tiago Deanna on 28/05/22.
-//
-
 import UIKit
+import Reusable
 
-class ProfileViewController: UIViewController {
+final class ProfileViewController: UIViewController, StoryboardBased {
+        
+    private lazy var profileView: ProfileView = .loadFromNib()
     
-    @IBOutlet weak var ProfileTableView: UITableView!    
-
+    private var data: ProfileModel? {
+        didSet {
+            updateView()
+        }
+    }
+    
+    override func loadView() {
+        super.loadView()
+        profileView.footerDelegate = self
+        view = profileView
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        ProfileTableView.dataSource = self
-        ProfileTableView.delegate = self
-        ProfileTableView.rowHeight = 164
-        ProfileTableView.sectionHeaderHeight = 150
-        ProfileTableView.register(
-            UINib(nibName: ProfileTableViewCell.identifier, bundle: Bundle.main),
-            forCellReuseIdentifier: ProfileTableViewCell.identifier
-        )
-        ProfileTableView.register(
-            UINib(nibName: HeaderProfileTableViewCell.identifier, bundle: Bundle.main),
-            forCellReuseIdentifier: HeaderProfileTableViewCell.identifier
-        )
+        loadData()
     }
     
-}
-
-extension ProfileViewController: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        1
+    private func loadData() {
+        data = .makeProfileModel()
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(
-            withIdentifier: ProfileTableViewCell.identifier, for: indexPath
-        ) as? ProfileTableViewCell else {
-            return UITableViewCell()
-        }
-        return cell
-    }
-    
-   func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-    guard let cell = tableView.dequeueReusableCell(
-        withIdentifier: HeaderProfileTableViewCell.identifier
-    ) as? HeaderProfileTableViewCell else {
-        return UITableViewCell()
-    }
-    cell.profileImageView.layer.cornerRadius = 40
-    return cell
+    private func updateView() {
+        guard let data = data else { return }
+        profileView.update(with: data)
     }
 }
 
-extension ProfileViewController: UITableViewDelegate {
- 
+extension ProfileViewController: ProfileFooterViewDelegate {
+    func didTapRegister() {
+        let loginViewController = LoginViewController.instantiate()
+        navigationController?.pushViewController(loginViewController, animated: true)
+    }
 }
