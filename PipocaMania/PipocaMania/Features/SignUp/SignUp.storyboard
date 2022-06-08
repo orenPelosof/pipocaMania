@@ -8,6 +8,16 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Home-->
+        <scene sceneID="eBI-Rm-J9N">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Home" id="L8m-e2-dO2" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Aza-ys-jjA"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r1u-0n-bPh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="654" y="116"/>
+        </scene>
         <!--SignUp-->
         <scene sceneID="Id9-WQ-U7H">
             <objects>
@@ -201,6 +211,9 @@
                                         </fragment>
                                     </attributedString>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="L8m-e2-dO2" kind="show" id="Jpc-eZ-CwF"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6ul-pJ-P0g"/>
