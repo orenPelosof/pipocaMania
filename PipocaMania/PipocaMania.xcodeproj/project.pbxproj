@@ -18,6 +18,7 @@
 		5A8ACEC4284026700018E385 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8ACEC3284026700018E385 /* SceneDelegate.swift */; };
 		5A8ACECB284026720018E385 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A8ACECA284026720018E385 /* Assets.xcassets */; };
 		5A8ACECE284026720018E385 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A8ACECC284026720018E385 /* LaunchScreen.storyboard */; };
+		FA6EE6FF28505A5600D4DE21 /* FilterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6EE6FE28505A5600D4DE21 /* FilterCollectionViewCell.swift */; };
 		FA8CAEF62845014700FB9BEA /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8CAEF52845014700FB9BEA /* FilterViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +36,7 @@
 		5A8ACECA284026720018E385 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5A8ACECD284026720018E385 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5A8ACECF284026720018E385 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA6EE6FE28505A5600D4DE21 /* FilterCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCollectionViewCell.swift; sourceTree = "<group>"; };
 		FA8CAEF52845014700FB9BEA /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -90,6 +92,8 @@
 		5A78695528416238001319B3 /* Filter */ = {
 			isa = PBXGroup;
 			children = (
+				FA8CAEF52845014700FB9BEA /* FilterViewController.swift */,
+				FA6EE6FE28505A5600D4DE21 /* FilterCollectionViewCell.swift */,
 				5A786964284163F5001319B3 /* Filter.storyboard */,
 			);
 			path = Filter;
@@ -116,7 +120,6 @@
 			children = (
 				5A8ACEC1284026700018E385 /* AppDelegate.swift */,
 				5A8ACEC3284026700018E385 /* SceneDelegate.swift */,
-				FA8CAEF52845014700FB9BEA /* FilterViewController.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -243,6 +246,7 @@
 			files = (
 				FA8CAEF62845014700FB9BEA /* FilterViewController.swift in Sources */,
 				5A8ACEC2284026700018E385 /* AppDelegate.swift in Sources */,
+				FA6EE6FF28505A5600D4DE21 /* FilterCollectionViewCell.swift in Sources */,
 				5A8ACEC4284026700018E385 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
