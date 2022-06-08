@@ -32,6 +32,9 @@
                                 <variation key="heightClass=regular-widthClass=compact">
                                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </variation>
+                                <connections>
+                                    <action selector="segmentSelectedAction:" destination="CX5-bt-TjC" eventType="valueChanged" id="02I-4U-KC1"/>
+                                </connections>
                             </segmentedControl>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="headTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OFu-2d-UCs">
                                 <rect key="frame" x="265" y="121" width="110" height="19"/>
@@ -106,7 +109,7 @@
                     <connections>
                         <outlet property="filmesSeriesSegmentedControl" destination="KFT-oV-FlZ" id="dqv-Mf-iSg"/>
                         <outlet property="filterSearchBar" destination="XAc-nX-IEJ" id="0mg-gw-XcZ"/>
-                        <outlet property="moviesCollectionView" destination="XOa-VA-8iN" id="G1R-xi-pew"/>
+                        <outlet property="postersCollectionView" destination="XOa-VA-8iN" id="G1R-xi-pew"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SJn-D1-Aaa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
