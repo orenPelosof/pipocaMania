@@ -161,7 +161,7 @@
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="uwS-PK-811"/>
-                        <color key="backgroundColor" red="0.082352941176470587" green="0.078431372549019607" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.082699395719999999" green="0.077885679900000004" blue="0.1176521853" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="ieS-hI-Kcm" firstAttribute="leading" secondItem="uwS-PK-811" secondAttribute="leading" id="5Kz-6i-Ar6"/>
                             <constraint firstItem="uwS-PK-811" firstAttribute="trailing" secondItem="7Ag-Ob-v2R" secondAttribute="trailing" constant="23" id="9yg-X0-xcl"/>
