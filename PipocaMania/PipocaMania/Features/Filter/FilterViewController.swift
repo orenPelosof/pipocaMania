@@ -13,9 +13,9 @@ class FilterViewController: UIViewController {
     @IBOutlet var filmesSeriesSegmentedControl: UISegmentedControl!
     @IBOutlet var postersCollectionView: UICollectionView!
     
-    var seriesImages: [String] = ["strangerthings", "arrow", "elite", "flash", "moonknight"]
+    var seriesImages: [String] = ["strangerthings", "arrow", "elite", "flash", "moonknight", "halo_new", "halo", "hulkverse", "imgroot", "lastkingdom", "msmarvel"]
     
-    var filmesImages: [String] = ["sonic", "batman", "doctorstrange", "morbius"]
+    var filmesImages: [String] = ["sonic", "batman", "doctorstrange", "morbius", "avatar2", "firestarter", "jurassic", "matrixresurrections", "projetoadam", "ticoeteco", "turningred", "uncharted", "moonfall"]
     
     var filtroFilmes: [String] = []
     
