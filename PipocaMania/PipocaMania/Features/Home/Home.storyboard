@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ieS-hI-Kcm">
-                                <rect key="frame" x="0.0" y="331" width="414" height="479"/>
+                                <rect key="frame" x="0.0" y="337" width="414" height="473"/>
                                 <color key="backgroundColor" red="0.082699395719999999" green="0.077885679900000004" blue="0.1176521853" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="i7R-MJ-qDC">
                                     <size key="itemSize" width="346" height="467"/>
@@ -29,7 +29,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="filmeCell" id="VpC-zn-Cd8" customClass="HomeCollectionViewCell" customModule="PipocaMania" customModuleProvider="target">
-                                        <rect key="frame" x="10" y="10" width="346" height="459"/>
+                                        <rect key="frame" x="10" y="7" width="346" height="459"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Lhc-qN-YYx">
                                             <rect key="frame" x="0.0" y="0.0" width="346" height="459"/>
@@ -147,7 +147,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yfX-rD-5TP">
-                                <rect key="frame" x="24" y="282" width="121.5" height="27"/>
+                                <rect key="frame" x="24" y="290" width="121.5" height="27"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Tendências">
                                         <attributes>
@@ -187,10 +187,10 @@
                             <constraint firstItem="yfX-rD-5TP" firstAttribute="leading" secondItem="uwS-PK-811" secondAttribute="leading" constant="24" id="Ubm-AN-edf"/>
                             <constraint firstItem="DqR-F8-VPm" firstAttribute="top" secondItem="uwS-PK-811" secondAttribute="top" constant="36" id="WGW-5x-WKC"/>
                             <constraint firstItem="7Ag-Ob-v2R" firstAttribute="leading" secondItem="uwS-PK-811" secondAttribute="leading" constant="23" id="isU-D0-MRp"/>
-                            <constraint firstItem="yfX-rD-5TP" firstAttribute="top" secondItem="7Ag-Ob-v2R" secondAttribute="bottom" constant="22" id="mPj-FJ-fqh"/>
+                            <constraint firstItem="yfX-rD-5TP" firstAttribute="top" secondItem="7Ag-Ob-v2R" secondAttribute="bottom" constant="30" id="mPj-FJ-fqh"/>
                             <constraint firstItem="uwS-PK-811" firstAttribute="bottom" secondItem="ieS-hI-Kcm" secondAttribute="bottom" constant="3" id="pGx-Ob-vxJ"/>
                             <constraint firstItem="uwS-PK-811" firstAttribute="trailing" secondItem="ieS-hI-Kcm" secondAttribute="trailing" id="pgM-2Q-a2B"/>
-                            <constraint firstItem="ieS-hI-Kcm" firstAttribute="top" secondItem="yfX-rD-5TP" secondAttribute="bottom" constant="22" id="rRi-AR-aKS"/>
+                            <constraint firstItem="ieS-hI-Kcm" firstAttribute="top" secondItem="yfX-rD-5TP" secondAttribute="bottom" constant="20" id="rRi-AR-aKS"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="lpx-bC-9XI"/>

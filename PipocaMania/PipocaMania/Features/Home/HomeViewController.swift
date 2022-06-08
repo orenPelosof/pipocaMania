@@ -33,6 +33,11 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
         let cell = CollectionView.dequeueReusableCell(withReuseIdentifier: "filmeCell", for: indexPath) as! HomeCollectionViewCell
         cell.posterFilme.image = UIImage(named: ArrayFilmes[indexPath.item])
         cell.textoFilme.text = ArrayFilmes[indexPath.item]
+        
+        cell.tituloFilme.layer.cornerRadius = 10
+        cell.pontuacaoFilme.layer.cornerRadius = 10
+        cell.estrelaFilme.tintColor = .yellow
+        
         return cell
         
     }
