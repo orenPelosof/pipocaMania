@@ -6,18 +6,20 @@
 //
 
 import UIKit
+import Reusable
 
-class InfoDetailViewCell: UITableViewCell {
-
+final class InfoDetailViewCell: UITableViewCell, NibLoadable, Reusable {
+    
+    
+    @IBOutlet weak var releaseDateLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var genreLabel: UILabel!
+    @IBOutlet weak var genreDescriptionLabel: UIButton!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+        backgroundColor = .primary
+        selectionStyle = .none
     }
     
 }

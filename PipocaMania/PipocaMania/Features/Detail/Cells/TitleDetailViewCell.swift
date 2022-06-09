@@ -6,18 +6,17 @@
 //
 
 import UIKit
+import Reusable
 
-class TitleDetailViewCell: UITableViewCell {
+final class TitleDetailViewCell: UITableViewCell, NibLoadable, Reusable {
 
+    @IBOutlet weak var titleDetailLabel: UILabel!
+    @IBOutlet weak var durationLabel: UILabel!
+    @IBOutlet weak var starRanking: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        backgroundColor = .primary
+        selectionStyle = .none
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-    
 }

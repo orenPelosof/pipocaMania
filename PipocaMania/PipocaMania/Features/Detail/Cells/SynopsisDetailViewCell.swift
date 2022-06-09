@@ -6,18 +6,18 @@
 //
 
 import UIKit
+import Reusable
 
-class SynopsisDetailViewCell: UITableViewCell {
+final class SynopsisDetailViewCell: UITableViewCell, NibLoadable, Reusable {
 
+    
+    @IBOutlet weak var sinopseLabel: UILabel!
+    @IBOutlet weak var sinopseDescriptionLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+        backgroundColor = .primary
+        selectionStyle = .none
     }
     
 }

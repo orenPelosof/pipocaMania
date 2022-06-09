@@ -6,18 +6,15 @@
 //
 
 import UIKit
+import Reusable
 
-class RelatedMoviesViewCell: UITableViewCell {
+final class RelatedMoviesViewCell: UITableViewCell, NibLoadable, Reusable {
 
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+        backgroundColor = .primary
+        selectionStyle = .none
     }
     
 }
