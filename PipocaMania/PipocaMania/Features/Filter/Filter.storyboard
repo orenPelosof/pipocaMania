@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -18,10 +19,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="top" segmentControlStyle="bordered" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="KFT-oV-FlZ">
-                                <rect key="frame" x="44" y="211" width="326" height="24"/>
+                                <rect key="frame" x="20" y="196" width="374" height="24"/>
                                 <color key="backgroundColor" red="0.97438901659999999" green="0.39268863199999998" blue="0.29542246459999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="23" id="gHt-AM-Kof"/>
+                                    <constraint firstAttribute="height" constant="23" id="kfC-jU-Hae"/>
                                 </constraints>
                                 <segments>
                                     <segment title="Filmes"/>
@@ -36,24 +37,38 @@
                                     <action selector="segmentSelectedAction:" destination="CX5-bt-TjC" eventType="valueChanged" id="02I-4U-KC1"/>
                                 </connections>
                             </segmentedControl>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="headTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OFu-2d-UCs">
-                                <rect key="frame" x="265" y="121" width="110" height="19"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="19" id="Y1f-eY-uMv"/>
-                                    <constraint firstAttribute="width" constant="110" id="uVG-pI-40Q"/>
-                                </constraints>
+                            <searchBar contentMode="redraw" barStyle="blackTranslucent" searchBarStyle="minimal" text="" placeholder="Procure um título" translatesAutoresizingMaskIntoConstraints="NO" id="XAc-nX-IEJ">
+                                <rect key="frame" x="10" y="140" width="394" height="51"/>
+                                <color key="backgroundColor" red="0.083906792100000002" green="0.07849747688" blue="0.1236113533" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Categorias" subtitle="">
-                                    <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                                <color key="barTintColor" red="0.74941140409999996" green="0.32464498279999998" blue="0.25434735419999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <scopeButtonTitles>
+                                    <string>Title</string>
+                                    <string>Title</string>
+                                </scopeButtonTitles>
+                            </searchBar>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="fill" contentVerticalAlignment="center" buttonType="system" showsTouchWhenHighlighted="YES" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="clip" pointerInteraction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yqy-nM-fJA">
+                                <rect key="frame" x="20" y="224" width="138" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="cNb-pW-80k"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" imagePlacement="leading" title="Categorias: " imagePadding="0.0" cornerStyle="dynamic" titleAlignment="leading">
+                                    <imageReference key="image" image="arrowtriangle.down.circle.fill" catalog="system" symbolScale="small"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="font">
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                    </preferredSymbolConfiguration>
+                                    <fontDescription key="titleFontDescription" type="system" weight="light" pointSize="5"/>
+                                    <directionalEdgeInsets key="contentInsets" top="0.0" leading="0.0" bottom="0.0" trailing="0.0"/>
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="wDQ-Gm-or6" kind="push" id="eoL-dm-RpO"/>
+                                </connections>
                             </button>
-                            <searchBar contentMode="redraw" searchBarStyle="minimal" text="" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XAc-nX-IEJ">
-                                <rect key="frame" x="10" y="145" width="394" height="51"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </searchBar>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="XOa-VA-8iN">
-                                <rect key="frame" x="10" y="284" width="394" height="519"/>
+                                <rect key="frame" x="10" y="254" width="394" height="549"/>
                                 <color key="backgroundColor" red="0.082294993100000005" green="0.077418155969999999" blue="0.123009719" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="crG-FE-Vph">
                                     <size key="itemSize" width="171" height="241"/>
@@ -91,18 +106,19 @@
                         <viewLayoutGuide key="safeArea" id="eXh-4E-c4O"/>
                         <color key="backgroundColor" red="0.082352941176470587" green="0.078431372549019607" blue="0.12156862745098039" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="eXh-4E-c4O" firstAttribute="trailing" secondItem="XOa-VA-8iN" secondAttribute="trailing" constant="10" id="E3a-Gp-zVd"/>
-                            <constraint firstItem="eXh-4E-c4O" firstAttribute="trailing" secondItem="KFT-oV-FlZ" secondAttribute="trailing" constant="44" id="J6B-h1-bcI"/>
-                            <constraint firstItem="XAc-nX-IEJ" firstAttribute="top" secondItem="OFu-2d-UCs" secondAttribute="bottom" constant="5" id="Y2u-XX-sl3"/>
-                            <constraint firstItem="XOa-VA-8iN" firstAttribute="top" secondItem="KFT-oV-FlZ" secondAttribute="bottom" constant="50" id="dn6-9A-CE6"/>
-                            <constraint firstItem="XAc-nX-IEJ" firstAttribute="leading" secondItem="eXh-4E-c4O" secondAttribute="leading" constant="10" id="gY1-5Q-8M5"/>
-                            <constraint firstItem="OFu-2d-UCs" firstAttribute="top" secondItem="AfI-Tf-06D" secondAttribute="top" constant="121" id="jZa-Xg-RKv"/>
-                            <constraint firstItem="XOa-VA-8iN" firstAttribute="leading" secondItem="eXh-4E-c4O" secondAttribute="leading" constant="10" id="nHB-1K-OT6"/>
-                            <constraint firstItem="KFT-oV-FlZ" firstAttribute="leading" secondItem="eXh-4E-c4O" secondAttribute="leading" constant="44" id="pek-Jb-564"/>
-                            <constraint firstItem="KFT-oV-FlZ" firstAttribute="top" secondItem="XAc-nX-IEJ" secondAttribute="bottom" constant="15" id="rh9-NF-3JW"/>
-                            <constraint firstItem="eXh-4E-c4O" firstAttribute="bottom" secondItem="XOa-VA-8iN" secondAttribute="bottom" constant="10" id="t2Y-W8-T8Q"/>
-                            <constraint firstItem="eXh-4E-c4O" firstAttribute="trailing" secondItem="XAc-nX-IEJ" secondAttribute="trailing" constant="10" id="uRf-JH-fLF"/>
-                            <constraint firstItem="eXh-4E-c4O" firstAttribute="trailing" secondItem="OFu-2d-UCs" secondAttribute="trailing" constant="39" id="yih-J9-YLY"/>
+                            <constraint firstItem="XOa-VA-8iN" firstAttribute="leading" secondItem="eXh-4E-c4O" secondAttribute="leading" constant="10" id="7U5-eO-gLV"/>
+                            <constraint firstItem="KFT-oV-FlZ" firstAttribute="top" secondItem="XAc-nX-IEJ" secondAttribute="bottom" constant="5" id="CI9-iu-ddt"/>
+                            <constraint firstItem="eXh-4E-c4O" firstAttribute="trailing" secondItem="XOa-VA-8iN" secondAttribute="trailing" constant="10" id="JoJ-2p-xBO"/>
+                            <constraint firstItem="eXh-4E-c4O" firstAttribute="trailing" secondItem="yqy-nM-fJA" secondAttribute="trailing" constant="256" id="LqF-9g-pWu"/>
+                            <constraint firstItem="XOa-VA-8iN" firstAttribute="top" secondItem="yqy-nM-fJA" secondAttribute="bottom" constant="10" id="OGg-bi-8iq"/>
+                            <constraint firstItem="XAc-nX-IEJ" firstAttribute="leading" secondItem="eXh-4E-c4O" secondAttribute="leading" constant="10" id="VKB-ug-b4k"/>
+                            <constraint firstItem="XAc-nX-IEJ" firstAttribute="top" secondItem="eXh-4E-c4O" secondAttribute="top" id="hLo-Zu-f2V"/>
+                            <constraint firstItem="eXh-4E-c4O" firstAttribute="bottom" secondItem="XOa-VA-8iN" secondAttribute="bottom" constant="10" id="lVQ-ot-EAU"/>
+                            <constraint firstItem="yqy-nM-fJA" firstAttribute="top" secondItem="KFT-oV-FlZ" secondAttribute="bottom" constant="5" id="rsO-mj-EsI"/>
+                            <constraint firstItem="eXh-4E-c4O" firstAttribute="trailing" secondItem="KFT-oV-FlZ" secondAttribute="trailing" constant="20" id="saa-Pd-AYc"/>
+                            <constraint firstItem="KFT-oV-FlZ" firstAttribute="leading" secondItem="eXh-4E-c4O" secondAttribute="leading" constant="20" id="uZn-6C-sP6"/>
+                            <constraint firstItem="yqy-nM-fJA" firstAttribute="leading" secondItem="eXh-4E-c4O" secondAttribute="leading" constant="20" id="yYv-XZ-TKd"/>
+                            <constraint firstItem="eXh-4E-c4O" firstAttribute="trailing" secondItem="XAc-nX-IEJ" secondAttribute="trailing" constant="10" id="z7y-vc-Lqy"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Buscar filmes" id="GVz-j9-mKJ"/>
@@ -114,7 +130,44 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SJn-D1-Aaa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1214.4927536231885" y="91.741071428571431"/>
+            <point key="canvasLocation" x="1098.5507246376812" y="91.741071428571431"/>
+        </scene>
+        <!--Categorias:-->
+        <scene sceneID="Kjs-EE-IXq">
+            <objects>
+                <viewController id="wDQ-Gm-or6" customClass="CategoriasViewController" customModule="PipocaMania" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eVg-pU-hfI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" verticalHuggingPriority="249" translatesAutoresizingMaskIntoConstraints="NO" id="Dd2-Qg-oZ3">
+                                <rect key="frame" x="0.0" y="174" width="414" height="639"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </variation>
+                            </pickerView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Y8r-2h-v7Q"/>
+                        <color key="backgroundColor" red="0.082294993100000005" green="0.077418155969999999" blue="0.123009719" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Y8r-2h-v7Q" firstAttribute="bottom" secondItem="Dd2-Qg-oZ3" secondAttribute="bottom" id="Jwb-jL-diZ"/>
+                            <constraint firstItem="Y8r-2h-v7Q" firstAttribute="trailing" secondItem="Dd2-Qg-oZ3" secondAttribute="trailing" id="N6w-Uf-OFy"/>
+                            <constraint firstItem="Dd2-Qg-oZ3" firstAttribute="top" secondItem="Y8r-2h-v7Q" secondAttribute="top" id="gNY-jq-v6Z"/>
+                            <constraint firstItem="Dd2-Qg-oZ3" firstAttribute="leading" secondItem="Y8r-2h-v7Q" secondAttribute="leading" id="jSr-F4-FFd"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Categorias:" prompt="O que você quer assistir agora? Escolha uma categoria e volte para ver as opções." largeTitleDisplayMode="always" id="84n-za-hEt">
+                        <barButtonItem key="backBarButtonItem" title="Títulos" id="5ya-rp-mat"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="categoriasPickerView" destination="Dd2-Qg-oZ3" id="IBZ-e3-ndG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uYh-hJ-OMu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1871" y="92"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="a4C-H1-V12">
@@ -146,6 +199,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="arrowtriangle.down.circle.fill" catalog="system" width="128" height="121"/>
         <image name="playApp" width="35" height="32"/>
     </resources>
 </document>

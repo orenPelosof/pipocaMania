@@ -113,6 +113,6 @@ extension FilterViewController: UISearchBarDelegate {
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-//        searchBar.resignFirstResponder()
+        searchBar.resignFirstResponder()
     }
 }
