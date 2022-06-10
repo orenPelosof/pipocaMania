@@ -25,6 +25,8 @@ class FilterViewModel: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        categoriasPickerView.setValue(UIColor.white, forKeyPath: "textColor")
+        categoriasPickerView.backgroundColor = .black
         
         categoriasPickerView.delegate = self
         categoriasPickerView.dataSource = self
@@ -49,8 +51,15 @@ extension FilterViewModel: UIPickerViewDelegate {
 
 extension FilterViewModel: UIPickerViewDataSource {
     
+    func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
+            let titleData = "\(categoriasDisponiveis[row])"
+            let myTitle = NSAttributedString(string: titleData, attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
+
+            return myTitle
+        }
+    
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
-    return 1
+        return 1
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
