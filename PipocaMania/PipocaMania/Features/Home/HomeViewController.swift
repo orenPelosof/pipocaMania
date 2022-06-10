@@ -41,4 +41,8 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
         return cell
         
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: "detailView", sender: indexPath)
+    }
 }

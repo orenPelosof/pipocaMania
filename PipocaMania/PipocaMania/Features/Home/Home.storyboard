@@ -197,11 +197,22 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="CollectionView" destination="ieS-hI-Kcm" id="m1z-lf-4mW"/>
+                        <segue destination="ySh-uS-9M7" kind="show" identifier="detailView" id="2I4-5R-TIu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YoU-Br-oaM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1246.376811594203" y="97.767857142857139"/>
+        </scene>
+        <!--Detail-->
+        <scene sceneID="L71-QF-bX3">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Detail" id="ySh-uS-9M7" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="3h6-AD-kv4"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ev5-zJ-rLe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1935" y="98"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="DKe-aW-hoY">
