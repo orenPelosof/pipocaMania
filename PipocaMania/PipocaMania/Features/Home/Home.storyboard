@@ -220,12 +220,14 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vPe-wA-AzO" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="HomeApp" id="g2q-GP-dCL"/>
                     <toolbarItems/>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="tPV-U8-Irg">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="oEF-Nc-yOV">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="GRv-3B-Rwm" kind="relationship" relationship="rootViewController" id="RGU-ZK-cTO"/>
                     </connections>
