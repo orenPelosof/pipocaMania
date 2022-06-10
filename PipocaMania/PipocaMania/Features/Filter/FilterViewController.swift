@@ -12,6 +12,7 @@ class FilterViewController: UIViewController {
     @IBOutlet var filterSearchBar: UISearchBar!
     @IBOutlet var filmesSeriesSegmentedControl: UISegmentedControl!
     @IBOutlet var postersCollectionView: UICollectionView!
+    @IBOutlet var categoriasLabel: UILabel!
     
     var seriesImages: [String] = ["strangerthings", "arrow", "elite", "flash", "moonknight", "halo_new", "halo", "hulkverse", "imgroot", "lastkingdom", "msmarvel"]
     
@@ -44,6 +45,8 @@ class FilterViewController: UIViewController {
     }
     
 }
+
+
 
 extension FilterViewController: UICollectionViewDelegate {
     

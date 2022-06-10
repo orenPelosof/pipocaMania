@@ -1,5 +1,5 @@
 //
-//  CategoriasViewController.swift
+//  FilterViewModel.swift
 //  PipocaMania
 //
 //  Created by Oren Pelosof on 08/06/22.
@@ -7,11 +7,21 @@
 
 import UIKit
 
-class CategoriasViewController: UIViewController {
+protocol FilterViewModelDelegate {
+    func nomearCategoriasLabel()
+}
+
+
+class FilterViewModel: UIViewController {
 
     @IBOutlet var categoriasPickerView: UIPickerView!
     
-    let categoriasDisponiveis: [String] = ["Ação", "Animação", "Aventura", "Terror", "Romance", "Ficção Científica", "Comédia", "Temas adultos", "Para toda família", "Infantil"]
+    let categoriasDisponiveis: [String] = ["Todas", "Ação", "Animação", "Aventura", "Terror", "Romance", "Ficção Científica", "Comédia", "Temas adultos", "Para toda família", "Infantil"]
+    
+     var delegate: FilterViewModelDelegate? = nil
+    
+    
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,10 +31,11 @@ class CategoriasViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    
 
 }
 
-extension CategoriasViewController: UIPickerViewDelegate {
+extension FilterViewModel: UIPickerViewDelegate {
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         let genero = categoriasDisponiveis[row]
@@ -36,7 +47,7 @@ extension CategoriasViewController: UIPickerViewDelegate {
     }
 }
 
-extension CategoriasViewController: UIPickerViewDataSource {
+extension FilterViewModel: UIPickerViewDataSource {
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
     return 1
