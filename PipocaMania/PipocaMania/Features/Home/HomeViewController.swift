@@ -26,6 +26,11 @@ class HomeViewController: UIViewController {
         navigationController?.navigationBar.isHidden = true
     }
     
+    
+    override func viewDidDisappear(_ animated: Bool) {super.viewDidDisappear(animated)
+        navigationController?.navigationBar.isHidden = false
+    }
+    
 }
 
 extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelegate {

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Reusable
 
 protocol FilterViewModelDelegate {
     func nomearCategoriasLabel()
@@ -26,7 +27,7 @@ class FilterViewModel: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         categoriasPickerView.setValue(UIColor.white, forKeyPath: "textColor")
-        categoriasPickerView.backgroundColor = .black
+        categoriasPickerView.backgroundColor = .primary
         
         categoriasPickerView.delegate = self
         categoriasPickerView.dataSource = self

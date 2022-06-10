@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ieS-hI-Kcm">
-                                <rect key="frame" x="0.0" y="337" width="414" height="473"/>
+                                <rect key="frame" x="0.0" y="331" width="414" height="479"/>
                                 <color key="backgroundColor" red="0.082699395719999999" green="0.077885679900000004" blue="0.1176521853" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="i7R-MJ-qDC">
                                     <size key="itemSize" width="346" height="467"/>
@@ -29,7 +29,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="filmeCell" id="VpC-zn-Cd8" customClass="HomeCollectionViewCell" customModule="PipocaMania" customModuleProvider="target">
-                                        <rect key="frame" x="10" y="7" width="346" height="459"/>
+                                        <rect key="frame" x="10" y="10" width="346" height="459"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Lhc-qN-YYx">
                                             <rect key="frame" x="0.0" y="0.0" width="346" height="459"/>
@@ -147,7 +147,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yfX-rD-5TP">
-                                <rect key="frame" x="24" y="290" width="121.5" height="27"/>
+                                <rect key="frame" x="24" y="284" width="121.5" height="27"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Tendências">
                                         <attributes>
@@ -158,36 +158,29 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="7Ag-Ob-v2R">
-                                <rect key="frame" x="23" y="212" width="368" height="48"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="48" id="pcn-k3-CmD"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <searchBar contentMode="redraw" barStyle="blackTranslucent" searchBarStyle="minimal" text="" placeholder="Procure um título" translatesAutoresizingMaskIntoConstraints="NO" id="htV-za-l7G">
+                                <rect key="frame" x="20" y="203" width="374" height="51"/>
+                                <color key="backgroundColor" red="0.083906792100000002" green="0.07849747688" blue="0.1236113533" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="barTintColor" red="0.74941140409999996" green="0.32464498279999998" blue="0.25434735419999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="magnifyingglass" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="oVY-qs-eAf">
-                                <rect key="frame" x="35" y="224.5" width="24" height="22.5"/>
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="24" id="6yy-nr-sFw"/>
-                                    <constraint firstAttribute="width" constant="24" id="bKp-tL-pGL"/>
-                                </constraints>
-                            </imageView>
+                                <scopeButtonTitles>
+                                    <string>Title</string>
+                                    <string>Title</string>
+                                </scopeButtonTitles>
+                            </searchBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="uwS-PK-811"/>
                         <color key="backgroundColor" red="0.082699395719999999" green="0.077885679900000004" blue="0.1176521853" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
+                            <constraint firstItem="htV-za-l7G" firstAttribute="top" secondItem="DqR-F8-VPm" secondAttribute="bottom" constant="50" id="0Cz-NY-6rk"/>
                             <constraint firstItem="ieS-hI-Kcm" firstAttribute="leading" secondItem="uwS-PK-811" secondAttribute="leading" id="5Kz-6i-Ar6"/>
-                            <constraint firstItem="uwS-PK-811" firstAttribute="trailing" secondItem="7Ag-Ob-v2R" secondAttribute="trailing" constant="23" id="9yg-X0-xcl"/>
-                            <constraint firstItem="oVY-qs-eAf" firstAttribute="leading" secondItem="7Ag-Ob-v2R" secondAttribute="leading" constant="12" id="LgY-Xr-zGP"/>
-                            <constraint firstItem="7Ag-Ob-v2R" firstAttribute="top" secondItem="DqR-F8-VPm" secondAttribute="bottom" constant="59" id="NrF-Uj-IGn"/>
+                            <constraint firstItem="htV-za-l7G" firstAttribute="leading" secondItem="uwS-PK-811" secondAttribute="leading" constant="20" id="BHN-Hb-hOI"/>
+                            <constraint firstItem="yfX-rD-5TP" firstAttribute="top" secondItem="htV-za-l7G" secondAttribute="bottom" constant="30" id="DaS-dh-Sc0"/>
+                            <constraint firstAttribute="trailing" secondItem="htV-za-l7G" secondAttribute="trailing" constant="20" id="Nol-NN-1Wk"/>
                             <constraint firstItem="DqR-F8-VPm" firstAttribute="centerX" secondItem="PtL-HR-lkz" secondAttribute="centerX" id="R3Y-u5-R6i"/>
-                            <constraint firstItem="oVY-qs-eAf" firstAttribute="centerY" secondItem="7Ag-Ob-v2R" secondAttribute="centerY" id="Rnf-Qv-rvR"/>
                             <constraint firstItem="yfX-rD-5TP" firstAttribute="leading" secondItem="uwS-PK-811" secondAttribute="leading" constant="24" id="Ubm-AN-edf"/>
                             <constraint firstItem="DqR-F8-VPm" firstAttribute="top" secondItem="uwS-PK-811" secondAttribute="top" constant="36" id="WGW-5x-WKC"/>
-                            <constraint firstItem="7Ag-Ob-v2R" firstAttribute="leading" secondItem="uwS-PK-811" secondAttribute="leading" constant="23" id="isU-D0-MRp"/>
-                            <constraint firstItem="yfX-rD-5TP" firstAttribute="top" secondItem="7Ag-Ob-v2R" secondAttribute="bottom" constant="30" id="mPj-FJ-fqh"/>
                             <constraint firstItem="uwS-PK-811" firstAttribute="bottom" secondItem="ieS-hI-Kcm" secondAttribute="bottom" constant="3" id="pGx-Ob-vxJ"/>
                             <constraint firstItem="uwS-PK-811" firstAttribute="trailing" secondItem="ieS-hI-Kcm" secondAttribute="trailing" id="pgM-2Q-a2B"/>
                             <constraint firstItem="ieS-hI-Kcm" firstAttribute="top" secondItem="yfX-rD-5TP" secondAttribute="bottom" constant="20" id="rRi-AR-aKS"/>
@@ -241,7 +234,6 @@
         <image name="HomeApp" width="25" height="23"/>
         <image name="LigaDaJustica" width="810" height="1200"/>
         <image name="Pipoca Mania" width="144" height="23"/>
-        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="star.fill" catalog="system" width="128" height="116"/>
         <systemColor name="systemGray4Color">
             <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
