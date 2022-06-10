@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Home-->
+        <!--Main-->
         <scene sceneID="eBI-Rm-J9N">
             <objects>
-                <viewControllerPlaceholder storyboardName="Home" id="L8m-e2-dO2" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Main" id="L8m-e2-dO2" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="Aza-ys-jjA"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r1u-0n-bPh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -21,7 +21,7 @@
         <!--SignUp-->
         <scene sceneID="Id9-WQ-U7H">
             <objects>
-                <viewController title="SignUp" id="I7X-cy-CfD" sceneMemberID="viewController">
+                <viewController title="SignUp" modalPresentationStyle="fullScreen" id="I7X-cy-CfD" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7ig-vA-9sM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
