@@ -11,6 +11,9 @@
 		0D2D89A2285161030025FDD1 /* SynopsisDetailViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D2D89A1285161030025FDD1 /* SynopsisDetailViewCell.xib */; };
 		0DB56DDC28514F0F00C4C483 /* TitleDetailViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DB56DDB28514F0F00C4C483 /* TitleDetailViewCell.xib */; };
 		0DB56DDE2851526500C4C483 /* InfoDetailViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DB56DDD2851526500C4C483 /* InfoDetailViewCell.xib */; };
+		1239CA7F2860F1810097DB0F /* FilmeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1239CA7E2860F1810097DB0F /* FilmeModel.swift */; };
+		1239CA832860F7230097DB0F /* ServicoHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1239CA822860F7230097DB0F /* ServicoHome.swift */; };
+		1239CA852860F7540097DB0F /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1239CA842860F7540097DB0F /* HomeViewModel.swift */; };
 		129B3E1828511C9B008799C4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129B3E1728511C9B008799C4 /* HomeViewController.swift */; };
 		129B3E1A28511EEE008799C4 /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129B3E1928511EEE008799C4 /* HomeCollectionViewCell.swift */; };
 		12AE38262853E30E008D29D4 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12AE38222853E30D008D29D4 /* Login.storyboard */; };
@@ -58,6 +61,9 @@
 		0D2D89A1285161030025FDD1 /* SynopsisDetailViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SynopsisDetailViewCell.xib; sourceTree = "<group>"; };
 		0DB56DDB28514F0F00C4C483 /* TitleDetailViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TitleDetailViewCell.xib; sourceTree = "<group>"; };
 		0DB56DDD2851526500C4C483 /* InfoDetailViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoDetailViewCell.xib; sourceTree = "<group>"; };
+		1239CA7E2860F1810097DB0F /* FilmeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmeModel.swift; sourceTree = "<group>"; };
+		1239CA822860F7230097DB0F /* ServicoHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicoHome.swift; sourceTree = "<group>"; };
+		1239CA842860F7540097DB0F /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		129B3E1728511C9B008799C4 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		129B3E1928511EEE008799C4 /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
 		12AE38222853E30D008D29D4 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Login.storyboard; path = PipocaMania/Features/Login/Login.storyboard; sourceTree = SOURCE_ROOT; };
@@ -220,8 +226,11 @@
 			isa = PBXGroup;
 			children = (
 				5A78696728416407001319B3 /* Home.storyboard */,
+				1239CA7E2860F1810097DB0F /* FilmeModel.swift */,
 				129B3E1928511EEE008799C4 /* HomeCollectionViewCell.swift */,
 				129B3E1728511C9B008799C4 /* HomeViewController.swift */,
+				1239CA822860F7230097DB0F /* ServicoHome.swift */,
+				1239CA842860F7540097DB0F /* HomeViewModel.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -230,7 +239,6 @@
 			isa = PBXGroup;
 			children = (
 				FA3CCE612852CAEF00DF3005 /* ViewModel */,
-				FA3CCE602852CADE00DF3005 /* View */,
 				FA8CAEF52845014700FB9BEA /* FilterViewController.swift */,
 				FA3CCE622852F55900DF3005 /* Titulos.swift */,
 				FA6EE6FE28505A5600D4DE21 /* FilterCollectionViewCell.swift */,
@@ -465,11 +473,14 @@
 				5A8ACEC2284026700018E385 /* AppDelegate.swift in Sources */,
 				FA3CCE632852F55900DF3005 /* Titulos.swift in Sources */,
 				FA6EE6FF28505A5600D4DE21 /* FilterCollectionViewCell.swift in Sources */,
+				1239CA7F2860F1810097DB0F /* FilmeModel.swift in Sources */,
 				5A8ACEC4284026700018E385 /* SceneDelegate.swift in Sources */,
 				129B3E1828511C9B008799C4 /* HomeViewController.swift in Sources */,
 				129B3E1A28511EEE008799C4 /* HomeCollectionViewCell.swift in Sources */,
+				1239CA852860F7540097DB0F /* HomeViewModel.swift in Sources */,
 				5A4A34F228513C2900BB5666 /* InfoDetailViewCell.swift in Sources */,
 				5A73B0FE284F865E00E63F7D /* UIColor+Extension.swift in Sources */,
+				1239CA832860F7230097DB0F /* ServicoHome.swift in Sources */,
 				FA82EE8B28512B1D00167730 /* FilterViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
