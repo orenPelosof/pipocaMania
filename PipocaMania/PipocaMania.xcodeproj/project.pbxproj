@@ -14,6 +14,7 @@
 		1239CA7F2860F1810097DB0F /* FilmeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1239CA7E2860F1810097DB0F /* FilmeModel.swift */; };
 		1239CA832860F7230097DB0F /* ServicoHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1239CA822860F7230097DB0F /* ServicoHome.swift */; };
 		1239CA852860F7540097DB0F /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1239CA842860F7540097DB0F /* HomeViewModel.swift */; };
+		124D24372863B88400275183 /* CadastroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124D24362863B88400275183 /* CadastroViewController.swift */; };
 		129B3E1828511C9B008799C4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129B3E1728511C9B008799C4 /* HomeViewController.swift */; };
 		129B3E1A28511EEE008799C4 /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129B3E1928511EEE008799C4 /* HomeCollectionViewCell.swift */; };
 		12AE38262853E30E008D29D4 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12AE38222853E30D008D29D4 /* Login.storyboard */; };
@@ -64,6 +65,7 @@
 		1239CA7E2860F1810097DB0F /* FilmeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmeModel.swift; sourceTree = "<group>"; };
 		1239CA822860F7230097DB0F /* ServicoHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicoHome.swift; sourceTree = "<group>"; };
 		1239CA842860F7540097DB0F /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		124D24362863B88400275183 /* CadastroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadastroViewController.swift; sourceTree = "<group>"; };
 		129B3E1728511C9B008799C4 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		129B3E1928511EEE008799C4 /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
 		12AE38222853E30D008D29D4 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Login.storyboard; path = PipocaMania/Features/Login/Login.storyboard; sourceTree = SOURCE_ROOT; };
@@ -218,6 +220,7 @@
 			isa = PBXGroup;
 			children = (
 				5A78696A28416424001319B3 /* SignUp.storyboard */,
+				124D24362863B88400275183 /* CadastroViewController.swift */,
 			);
 			path = SignUp;
 			sourceTree = "<group>";
@@ -475,6 +478,7 @@
 				FA6EE6FF28505A5600D4DE21 /* FilterCollectionViewCell.swift in Sources */,
 				1239CA7F2860F1810097DB0F /* FilmeModel.swift in Sources */,
 				5A8ACEC4284026700018E385 /* SceneDelegate.swift in Sources */,
+				124D24372863B88400275183 /* CadastroViewController.swift in Sources */,
 				129B3E1828511C9B008799C4 /* HomeViewController.swift in Sources */,
 				129B3E1A28511EEE008799C4 /* HomeCollectionViewCell.swift in Sources */,
 				1239CA852860F7540097DB0F /* HomeViewModel.swift in Sources */,
