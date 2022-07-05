@@ -10,7 +10,7 @@ import Foundation
 // MARK: - FilmeModel
 struct FilmeModel: Codable {
     let page: Int
-    let results: [Result]
+    let results: [Movie]
     let totalPages, totalResults: Int
 
     enum CodingKeys: String, CodingKey {
@@ -21,7 +21,7 @@ struct FilmeModel: Codable {
 }
 
 // MARK: - Result
-struct Result: Codable {
+struct Movie: Codable {
     let adult: Bool
     let backdropPath: String
     let genreIDS: [Int]
@@ -33,7 +33,7 @@ struct Result: Codable {
     let video: Bool
     let voteAverage: Double
     let voteCount: Int
-
+    
     enum CodingKeys: String, CodingKey {
         case adult
         case backdropPath = "backdrop_path"
@@ -52,5 +52,14 @@ struct Result: Codable {
 
 enum OriginalLanguage: String, Codable {
     case en = "en"
-    case ja = "ja"
+    case es = "es"
+}
+
+struct SetGenre: Codable {
+    let genres: [Genre]
+}
+
+struct Genre: Codable {
+    let id: Int
+    let name: String
 }

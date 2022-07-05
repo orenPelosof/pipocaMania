@@ -19,7 +19,7 @@
                         <viewLayoutGuide key="safeArea" id="VVA-Qf-50U"/>
                         <color key="backgroundColor" red="0.08235294118" green="0.078431372550000003" blue="0.1215686275" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Profile" id="dxG-ng-17A"/>
+                    <navigationItem key="navigationItem" title="Perfil" id="dxG-ng-17A"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yM8-jp-6C5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -1,12 +1,20 @@
 import UIKit
 import Reusable
 
+protocol ProfileViewDelegate {
+    func imagemClick()
+}
+
 final class ProfileView: UIView, NibLoadable {
     weak var footerDelegate: ProfileFooterViewDelegate?
     
     @IBOutlet private weak var tableView: UITableView!
     
     private var data: ProfileModel?
+    
+    var image: UIImage?
+    
+    var delegate: ProfileViewDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -42,7 +50,16 @@ extension ProfileView: UITableViewDataSource {
 extension ProfileView: UITableViewDelegate {
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let header = tableView.dequeueReusableHeaderFooterView(ProfileHeaderView.self)
-        header?.update(name: data?.name, imageName: data?.imageName)
+        var profileImage: UIImage?
+        
+        if image == nil {
+            profileImage = UIImage(named: data?.imageName ?? String())
+        } else {
+            profileImage = image
+        }
+        
+        header?.update(name: data?.name, imageName: profileImage)
+        header?.delegate = self
         return header
     }
     
@@ -59,4 +76,12 @@ extension ProfileView: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         64
     }
+}
+
+extension ProfileView: ProfileHeaderViewDelegate {
+    func imagemClick() {
+        delegate?.imagemClick()
+    }
+    
+    
 }

@@ -14,8 +14,8 @@ extension ProfileModel {
             infos: [
                 "Renomear",
                 "Trocar Senha",
-                "E-mail",
-                "Telefone"
+                "teste@gmail.com",
+                "(11) 00000-0000"
             ]
         )
     }

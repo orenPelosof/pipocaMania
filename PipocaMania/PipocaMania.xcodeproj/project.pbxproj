@@ -19,6 +19,10 @@
 		129B3E1A28511EEE008799C4 /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129B3E1928511EEE008799C4 /* HomeCollectionViewCell.swift */; };
 		12AE38262853E30E008D29D4 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12AE38222853E30D008D29D4 /* Login.storyboard */; };
 		12AE38272853E30E008D29D4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12AE38232853E30D008D29D4 /* LoginViewController.swift */; };
+		12D664032873830800FCF6B1 /* FilmeModelData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 12D664012873830800FCF6B1 /* FilmeModelData.xcdatamodeld */; };
+		12D664062873851500FCF6B1 /* Favorits.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12D664052873851500FCF6B1 /* Favorits.storyboard */; };
+		12D664082873852E00FCF6B1 /* FavoritsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D664072873852E00FCF6B1 /* FavoritsViewController.swift */; };
+		12D6640A28738C2D00FCF6B1 /* DataBaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D6640928738C2D00FCF6B1 /* DataBaseHelper.swift */; };
 		5A4A34EA28513C2900BB5666 /* DetailHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A4A34DB28513C2800BB5666 /* DetailHeaderView.xib */; };
 		5A4A34EB28513C2900BB5666 /* DetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4A34DC28513C2800BB5666 /* DetailHeaderView.swift */; };
 		5A4A34EC28513C2900BB5666 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4A34DD28513C2900BB5666 /* DetailViewController.swift */; };
@@ -72,6 +76,10 @@
 		12AE38232853E30D008D29D4 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = PipocaMania/Features/Login/LoginViewController.swift; sourceTree = SOURCE_ROOT; };
 		12AE38242853E30D008D29D4 /* Login.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Login.swift; path = PipocaMania/Features/Login/Login.swift; sourceTree = SOURCE_ROOT; };
 		12AE38252853E30E008D29D4 /* TelaLogIn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TelaLogIn.swift; path = PipocaMania/Features/Login/TelaLogIn.swift; sourceTree = SOURCE_ROOT; };
+		12D664022873830800FCF6B1 /* FilmeModelData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FilmeModelData.xcdatamodel; sourceTree = "<group>"; };
+		12D664052873851500FCF6B1 /* Favorits.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Favorits.storyboard; sourceTree = "<group>"; };
+		12D664072873852E00FCF6B1 /* FavoritsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritsViewController.swift; sourceTree = "<group>"; };
+		12D6640928738C2D00FCF6B1 /* DataBaseHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBaseHelper.swift; sourceTree = "<group>"; };
 		5A4A34DB28513C2800BB5666 /* DetailHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailHeaderView.xib; sourceTree = "<group>"; };
 		5A4A34DC28513C2800BB5666 /* DetailHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailHeaderView.swift; sourceTree = "<group>"; };
 		5A4A34DD28513C2900BB5666 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
@@ -143,6 +151,16 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
+		12D66404287384F900FCF6B1 /* Favorits */ = {
+			isa = PBXGroup;
+			children = (
+				12D664052873851500FCF6B1 /* Favorits.storyboard */,
+				12D664072873852E00FCF6B1 /* FavoritsViewController.swift */,
+				12D6640928738C2D00FCF6B1 /* DataBaseHelper.swift */,
+			);
+			path = Favorits;
+			sourceTree = "<group>";
+		};
 		5A4A34DA28513C2800BB5666 /* Header */ = {
 			isa = PBXGroup;
 			children = (
@@ -205,6 +223,7 @@
 		5A78694F2841604B001319B3 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				12D66404287384F900FCF6B1 /* Favorits */,
 				122906182853E2CC00C6C718 /* Login */,
 				5A78697028416EC6001319B3 /* Main */,
 				5A78695728416247001319B3 /* Profile */,
@@ -229,6 +248,7 @@
 			isa = PBXGroup;
 			children = (
 				5A78696728416407001319B3 /* Home.storyboard */,
+				12D664012873830800FCF6B1 /* FilmeModelData.xcdatamodeld */,
 				1239CA7E2860F1810097DB0F /* FilmeModel.swift */,
 				129B3E1928511EEE008799C4 /* HomeCollectionViewCell.swift */,
 				129B3E1728511C9B008799C4 /* HomeViewController.swift */,
@@ -443,6 +463,7 @@
 				5AEAA9E1284ED760000A342B /* ProfileHeaderView.xib in Resources */,
 				5A78697228416EEC001319B3 /* Main.storyboard in Resources */,
 				5AEAA9DB284ED3B5000A342B /* ProfileView.xib in Resources */,
+				12D664062873851500FCF6B1 /* Favorits.storyboard in Resources */,
 				0DB56DDC28514F0F00C4C483 /* TitleDetailViewCell.xib in Resources */,
 				5A786962284163C8001319B3 /* Detail.storyboard in Resources */,
 				0DB56DDE2851526500C4C483 /* InfoDetailViewCell.xib in Resources */,
@@ -463,8 +484,10 @@
 				0D2D899F285160A30025FDD1 /* SynopsisDetailViewCell.swift in Sources */,
 				5A4A34EB28513C2900BB5666 /* DetailHeaderView.swift in Sources */,
 				5A4A34F528513C2900BB5666 /* DetailView.swift in Sources */,
+				12D6640A28738C2D00FCF6B1 /* DataBaseHelper.swift in Sources */,
 				5A7283D92844EF4700242621 /* ProfileHeaderView.swift in Sources */,
 				5A4A34EC28513C2900BB5666 /* DetailViewController.swift in Sources */,
+				12D664082873852E00FCF6B1 /* FavoritsViewController.swift in Sources */,
 				5A4A34EF28513C2900BB5666 /* RelatedMoviesViewCell.swift in Sources */,
 				5A73B107284F8D7600E63F7D /* ProfileViewController.swift in Sources */,
 				12AE38272853E30E008D29D4 /* LoginViewController.swift in Sources */,
@@ -482,6 +505,7 @@
 				129B3E1828511C9B008799C4 /* HomeViewController.swift in Sources */,
 				129B3E1A28511EEE008799C4 /* HomeCollectionViewCell.swift in Sources */,
 				1239CA852860F7540097DB0F /* HomeViewModel.swift in Sources */,
+				12D664032873830800FCF6B1 /* FilmeModelData.xcdatamodeld in Sources */,
 				5A4A34F228513C2900BB5666 /* InfoDetailViewCell.swift in Sources */,
 				5A73B0FE284F865E00E63F7D /* UIColor+Extension.swift in Sources */,
 				1239CA832860F7230097DB0F /* ServicoHome.swift in Sources */,
@@ -698,6 +722,19 @@
 			productName = Reusable;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		12D664012873830800FCF6B1 /* FilmeModelData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				12D664022873830800FCF6B1 /* FilmeModelData.xcdatamodel */,
+			);
+			currentVersion = 12D664022873830800FCF6B1 /* FilmeModelData.xcdatamodel */;
+			path = FilmeModelData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 5A8ACEB6284026700018E385 /* Project object */;
 }

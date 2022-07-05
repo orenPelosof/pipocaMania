@@ -6,42 +6,28 @@
 //
 
 import Foundation
-import UIKit
 
 class ServicoHome {
     
-    func request(completion: @escaping ([Result]) -> Void) {
+    func request(completion: @escaping ([Movie]) -> Void) {
         
-        guard let url = URL(string: "https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=014aa09f21b98110eba6145cab75df78") else { return }
+        guard let url = URL(string: "https://api.themoviedb.org/3/movie/popular?api_key=fac7bcf7b467651b16fb9d8b092c85ea&language=en-US&page=1") else { return }
                 
                 let session = URLSession.shared
-                let task = session.dataTask(with: url) { data, response, error in
-                    
+                let task = session.dataTask(with: url, completionHandler: { data, response, error in
+                    DispatchQueue.main.async {
                     guard let data = data else { return }
                     let result = try? JSONDecoder().decode(FilmeModel.self, from: data)
                     
                     guard let resultado = result else { return }
                     
                     completion(resultado.results)
+                    }
                    
-                }
+                })
                 
                 task.resume()
         
     }
-    func requestImage(linkDaImagem: String, completion: @escaping (UIImage) -> Void) {
-        
-        guard let url = URL(string: "https://image.tmdb.org/t/p/w500\(linkDaImagem)") else { return }
-                
-            let task = URLSession.shared.dataTask(with: url) { data, response, error in
-                guard let data = data, error == nil else { return }
-                
-                DispatchQueue.main.async { /// execute on main thread
-                    completion(UIImage(data: data)!)
-                }
-            }
-            
-            task.resume()
-        }
         
 }
