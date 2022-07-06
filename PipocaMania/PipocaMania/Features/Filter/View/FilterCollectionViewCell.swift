@@ -10,9 +10,12 @@ import UIKit
 class FilterCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet var posterImageView: UIImageView!
+    @IBOutlet var labelTituloFilmes: UILabel!
     
-    func configureCell(_ poster: String) {
-        posterImageView.image = UIImage(named: poster)
+    func configureCell(_ poster: UIImage, _ titulo: String) {
+        posterImageView.image = poster
+        labelTituloFilmes.text = titulo
+        
     }
-
+    
 }

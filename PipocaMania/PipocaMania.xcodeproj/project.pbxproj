@@ -11,6 +11,9 @@
 		0D2D89A2285161030025FDD1 /* SynopsisDetailViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D2D89A1285161030025FDD1 /* SynopsisDetailViewCell.xib */; };
 		0DB56DDC28514F0F00C4C483 /* TitleDetailViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DB56DDB28514F0F00C4C483 /* TitleDetailViewCell.xib */; };
 		0DB56DDE2851526500C4C483 /* InfoDetailViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DB56DDD2851526500C4C483 /* InfoDetailViewCell.xib */; };
+		122379A62874F627006DBF53 /* FilterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122379A52874F627006DBF53 /* FilterService.swift */; };
+		122379A82874FADB006DBF53 /* CategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122379A72874FADB006DBF53 /* CategoryViewModel.swift */; };
+		122379AA287506F3006DBF53 /* CategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122379A9287506F3006DBF53 /* CategoryModel.swift */; };
 		1239CA7F2860F1810097DB0F /* FilmeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1239CA7E2860F1810097DB0F /* FilmeModel.swift */; };
 		1239CA832860F7230097DB0F /* ServicoHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1239CA822860F7230097DB0F /* ServicoHome.swift */; };
 		1239CA852860F7540097DB0F /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1239CA842860F7540097DB0F /* HomeViewModel.swift */; };
@@ -66,6 +69,9 @@
 		0D2D89A1285161030025FDD1 /* SynopsisDetailViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SynopsisDetailViewCell.xib; sourceTree = "<group>"; };
 		0DB56DDB28514F0F00C4C483 /* TitleDetailViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TitleDetailViewCell.xib; sourceTree = "<group>"; };
 		0DB56DDD2851526500C4C483 /* InfoDetailViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoDetailViewCell.xib; sourceTree = "<group>"; };
+		122379A52874F627006DBF53 /* FilterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterService.swift; sourceTree = "<group>"; };
+		122379A72874FADB006DBF53 /* CategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewModel.swift; sourceTree = "<group>"; };
+		122379A9287506F3006DBF53 /* CategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryModel.swift; sourceTree = "<group>"; };
 		1239CA7E2860F1810097DB0F /* FilmeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmeModel.swift; sourceTree = "<group>"; };
 		1239CA822860F7230097DB0F /* ServicoHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicoHome.swift; sourceTree = "<group>"; };
 		1239CA842860F7540097DB0F /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
@@ -132,6 +138,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		122379A42874F13A006DBF53 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FA3CCE622852F55900DF3005 /* Titulos.swift */,
+				FA6EE6FE28505A5600D4DE21 /* FilterCollectionViewCell.swift */,
+				FA8CAEF52845014700FB9BEA /* FilterViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		122906172853E23700C6C718 /* Recovered References */ = {
 			isa = PBXGroup;
 			children = (
@@ -262,10 +278,11 @@
 			isa = PBXGroup;
 			children = (
 				FA3CCE612852CAEF00DF3005 /* ViewModel */,
-				FA8CAEF52845014700FB9BEA /* FilterViewController.swift */,
-				FA3CCE622852F55900DF3005 /* Titulos.swift */,
-				FA6EE6FE28505A5600D4DE21 /* FilterCollectionViewCell.swift */,
+				122379A42874F13A006DBF53 /* View */,
 				5A786964284163F5001319B3 /* Filter.storyboard */,
+				122379A52874F627006DBF53 /* FilterService.swift */,
+				122379A72874FADB006DBF53 /* CategoryViewModel.swift */,
+				122379A9287506F3006DBF53 /* CategoryModel.swift */,
 			);
 			path = Filter;
 			sourceTree = "<group>";
@@ -481,11 +498,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				5AEAA9D8284ED396000A342B /* ProfileView.swift in Sources */,
+				122379A62874F627006DBF53 /* FilterService.swift in Sources */,
 				0D2D899F285160A30025FDD1 /* SynopsisDetailViewCell.swift in Sources */,
 				5A4A34EB28513C2900BB5666 /* DetailHeaderView.swift in Sources */,
 				5A4A34F528513C2900BB5666 /* DetailView.swift in Sources */,
 				12D6640A28738C2D00FCF6B1 /* DataBaseHelper.swift in Sources */,
 				5A7283D92844EF4700242621 /* ProfileHeaderView.swift in Sources */,
+				122379AA287506F3006DBF53 /* CategoryModel.swift in Sources */,
 				5A4A34EC28513C2900BB5666 /* DetailViewController.swift in Sources */,
 				12D664082873852E00FCF6B1 /* FavoritsViewController.swift in Sources */,
 				5A4A34EF28513C2900BB5666 /* RelatedMoviesViewCell.swift in Sources */,
@@ -507,6 +526,7 @@
 				1239CA852860F7540097DB0F /* HomeViewModel.swift in Sources */,
 				12D664032873830800FCF6B1 /* FilmeModelData.xcdatamodeld in Sources */,
 				5A4A34F228513C2900BB5666 /* InfoDetailViewCell.swift in Sources */,
+				122379A82874FADB006DBF53 /* CategoryViewModel.swift in Sources */,
 				5A73B0FE284F865E00E63F7D /* UIColor+Extension.swift in Sources */,
 				1239CA832860F7230097DB0F /* ServicoHome.swift in Sources */,
 				FA82EE8B28512B1D00167730 /* FilterViewModel.swift in Sources */,
