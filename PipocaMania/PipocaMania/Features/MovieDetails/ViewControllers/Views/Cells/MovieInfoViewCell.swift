@@ -8,7 +8,7 @@
 import UIKit
 import Reusable
 
-final class InfoDetailViewCell: UITableViewCell, NibLoadable, Reusable {
+final class MovieInfoViewCell: UITableViewCell, NibLoadable, Reusable {
     
     
     @IBOutlet weak var releaseDateLabel: UILabel!

@@ -1,26 +1,27 @@
-//
-//  DetailView.swift
-//  PipocaMania
-//
-//  Created by Wilton Fernandes da Silva on 08/06/22.
-//
-
 import UIKit
 import Reusable
 
-final class DetailView: UIView, NibLoadable {
-
-    @IBOutlet weak var tableView: UITableView!
+final class MovieDetailsView: UIView, NibLoadable {
+    
+    @IBOutlet private weak var tableView: UITableView!
+    
+    private var movie: MovieModel?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         tableView.backgroundColor = .primary
         tableView.dataSource = self
         tableView.delegate = self
-        tableView.register(cellType: TitleDetailViewCell.self)
-        tableView.register(cellType: InfoDetailViewCell.self)
-        tableView.register(cellType: SynopsisDetailViewCell.self)
+        tableView.register(cellType: MovieTitleViewCell.self)
+        tableView.register(cellType: MovieInfoViewCell.self)
+        tableView.register(cellType: MovieSynopsisViewCell.self)
         tableView.register(cellType: RelatedMoviesViewCell.self)
-        tableView.register(headerFooterViewType: DetailHeaderView.self)
+        tableView.register(headerFooterViewType: MovieHeaderView.self)
+    }
+    
+    func update(with movie: MovieModel?) {
+        self.movie = movie
+        tableView.reloadData()
     }
     
     private func makeCell(
@@ -29,13 +30,13 @@ final class DetailView: UIView, NibLoadable {
     ) -> UITableViewCell {
         switch indexPath.row {
         case 0:
-            let cell: TitleDetailViewCell = tableView.dequeueReusableCell(for: indexPath)
+            let cell: MovieTitleViewCell = tableView.dequeueReusableCell(for: indexPath)
             return cell
         case 1:
-            let cell: InfoDetailViewCell = tableView.dequeueReusableCell(for: indexPath)
+            let cell: MovieInfoViewCell = tableView.dequeueReusableCell(for: indexPath)
             return cell
         case 2:
-            let cell: SynopsisDetailViewCell = tableView.dequeueReusableCell(for: indexPath)
+            let cell: MovieSynopsisViewCell = tableView.dequeueReusableCell(for: indexPath)
             return cell
         default:
             let cell: RelatedMoviesViewCell = tableView.dequeueReusableCell(for: indexPath)
@@ -48,17 +49,17 @@ final class DetailView: UIView, NibLoadable {
         case 0:
             return 80
         case 1:
-            return 80
+            return 64
         case 2:
-            return 142
+            return 164
         default:
-            return 160
+            return 196
         }
     }
     
 }
 
-extension DetailView: UITableViewDataSource {
+extension MovieDetailsView: UITableViewDataSource {
     func tableView(
         _ tableView: UITableView,
         numberOfRowsInSection section: Int
@@ -74,7 +75,7 @@ extension DetailView: UITableViewDataSource {
     }
 }
 
-extension DetailView: UITableViewDelegate {
+extension MovieDetailsView: UITableViewDelegate {
     func tableView(
         _ tableView: UITableView,
         heightForRowAt indexPath: IndexPath
@@ -86,7 +87,8 @@ extension DetailView: UITableViewDelegate {
         _ tableView: UITableView,
         viewForHeaderInSection section: Int
     ) -> UIView? {
-        let header = tableView.dequeueReusableHeaderFooterView(DetailHeaderView.self)
+        let header = tableView.dequeueReusableHeaderFooterView(MovieHeaderView.self)
+        header?.update(with: movie)
         return header
     }
     
@@ -94,7 +96,6 @@ extension DetailView: UITableViewDelegate {
         _ tableView: UITableView,
         heightForHeaderInSection section: Int
     ) -> CGFloat {
-        280
+        260
     }
-    
-    }
+}

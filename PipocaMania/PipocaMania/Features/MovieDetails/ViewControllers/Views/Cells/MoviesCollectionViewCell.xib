@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="" id="gTV-IL-0wX" customClass="MoviesCollectionViewCell" customModule="PipocaMania" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="198" height="230"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="198" height="230"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FilmesRelacionados" translatesAutoresizingMaskIntoConstraints="NO" id="A8l-iI-ddX">
+                        <rect key="frame" x="12" y="12" width="142" height="126"/>
+                        <color key="backgroundColor" name="main"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="142" id="B4j-aI-VfV"/>
+                            <constraint firstAttribute="height" constant="126" id="koQ-or-L26"/>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="142" id="kyu-Ai-LHb"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="" value="NO"/>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Star Wars: The Rise of Skywalker" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ux-qu-89Z">
+                        <rect key="frame" x="12" y="178" width="140" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="BzF-VT-ZBw"/>
+                            <constraint firstAttribute="width" constant="140" id="SgE-6a-KiW"/>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="TSY-o0-ttr"/>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="140" id="bhT-Bw-UgS"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <color key="backgroundColor" name="main"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="6ux-qu-89Z" secondAttribute="bottom" constant="12" id="3bC-Mx-qan"/>
+                <constraint firstItem="6ux-qu-89Z" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="12" id="5fg-bD-9bs"/>
+                <constraint firstItem="A8l-iI-ddX" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="12" id="Qmz-GU-Kdx"/>
+                <constraint firstItem="A8l-iI-ddX" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="12" id="lqU-AD-cKn"/>
+            </constraints>
+            <size key="customSize" width="348" height="209"/>
+            <connections>
+                <outlet property="relatedFilmeImage" destination="A8l-iI-ddX" id="AJS-A4-KmK"/>
+                <outlet property="relatedTitleLabel" destination="6ux-qu-89Z" id="CUU-7n-5zB"/>
+            </connections>
+            <point key="canvasLocation" x="353.62318840579712" y="131.58482142857142"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="FilmesRelacionados" width="142" height="106"/>
+        <namedColor name="main">
+            <color red="0.082352941176470587" green="0.078431372549019607" blue="0.12156862745098039" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

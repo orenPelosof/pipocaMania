@@ -8,8 +8,8 @@
 import UIKit
 import Reusable
 
-final class TitleDetailViewCell: UITableViewCell, NibLoadable, Reusable {
-
+final class MovieTitleViewCell: UITableViewCell, NibLoadable, Reusable {
+    
     @IBOutlet weak var titleDetailLabel: UILabel!
     @IBOutlet weak var durationLabel: UILabel!
     @IBOutlet weak var starRanking: UILabel!
@@ -18,5 +18,6 @@ final class TitleDetailViewCell: UITableViewCell, NibLoadable, Reusable {
         super.awakeFromNib()
         backgroundColor = .primary
         selectionStyle = .none
+        
     }
 }
