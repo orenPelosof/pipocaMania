@@ -56,12 +56,11 @@ final class MovieDetailsView: UIView, NibLoadable {
         case 1:
             return 64
         case 2:
-            return 164
+            return 120
         default:
             return 196
         }
     }
-    
 }
 
 extension MovieDetailsView: UITableViewDataSource {

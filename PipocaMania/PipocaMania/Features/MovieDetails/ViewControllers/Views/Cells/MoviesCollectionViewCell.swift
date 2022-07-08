@@ -8,5 +8,6 @@ final class MoviesCollectionViewCell: UICollectionViewCell,  NibLoadable, Reusab
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        relatedFilmeImage.layer.cornerRadius = relatedFilmeImage.bounds.height / 10
     }
 }
