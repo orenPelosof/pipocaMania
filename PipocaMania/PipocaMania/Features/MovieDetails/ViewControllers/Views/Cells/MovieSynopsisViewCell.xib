@@ -32,7 +32,8 @@
             <color key="backgroundColor" systemColor="labelColor"/>
             <constraints>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="TbQ-DV-3Xw" secondAttribute="trailing" constant="16" id="737-T5-Byb"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="TbQ-DV-3Xw" secondAttribute="bottom" constant="12" id="A8J-ZT-Iil"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="TbQ-DV-3Xw" secondAttribute="bottom" constant="12" id="A8J-ZT-Iil"/>
+                <constraint firstItem="TbQ-DV-3Xw" firstAttribute="top" secondItem="14l-r0-mO2" secondAttribute="bottom" constant="4" id="Cto-Da-4Br"/>
                 <constraint firstItem="14l-r0-mO2" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="12" id="UVx-Wg-Jud"/>
                 <constraint firstItem="TbQ-DV-3Xw" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="XxQ-mG-aBS"/>
                 <constraint firstItem="14l-r0-mO2" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="yNi-Qe-Axb"/>

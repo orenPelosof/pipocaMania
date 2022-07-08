@@ -12,4 +12,8 @@ final class MovieSynopsisViewCell: UITableViewCell, NibLoadable, Reusable {
         selectionStyle = .none
     }
     
+    func update(with movie: MovieModel?) {
+        sinopseDescriptionLabel.text = movie?.overview
+    }
+    
 }

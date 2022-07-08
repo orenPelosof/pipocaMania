@@ -37,6 +37,13 @@ class HomeViewController: UIViewController {
         navigationController?.navigationBar.isHidden = false
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let movieDetailsViewController = segue.destination as? MovieDetailsViewController,
+           let idMovie = sender as? Int {
+            movieDetailsViewController.idMovie = idMovie
+        }
+    }
+    
 }
 
 extension HomeViewController: HomeViewModelDelegate {
@@ -84,7 +91,7 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        self.performSegue(withIdentifier: "detailView", sender: indexPath)
+        self.performSegue(withIdentifier: "detailView", sender: viewModel.listaDeFilmes[indexPath.item].id)
     }
 }
 

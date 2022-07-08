@@ -25,6 +25,10 @@
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UCw-2v-Er4" propertyAccessControl="none">
                             <rect key="frame" x="0.0" y="25.5" width="54.5" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="height" relation="lessThanOrEqual" constant="30" id="3HY-eB-DlV"/>
+                                <constraint firstAttribute="width" relation="lessThanOrEqual" constant="80" id="9fb-OA-Gm6"/>
+                            </constraints>
                             <state key="normal" title="Button"/>
                         </button>
                     </subviews>

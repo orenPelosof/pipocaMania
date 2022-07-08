@@ -206,7 +206,7 @@
 		5A1444712875EEC300CC40A2 /* MovieDetails */ = {
 			isa = PBXGroup;
 			children = (
-				5A1444742875EEC300CC40A2 /* common */,
+				5A1444742875EEC300CC40A2 /* Utils */,
 				5A1444932875EEC300CC40A2 /* Service */,
 				5A14448E2875EEC300CC40A2 /* Model */,
 				5A1444722875EEC300CC40A2 /* ViewModel */,
@@ -223,7 +223,7 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		5A1444742875EEC300CC40A2 /* common */ = {
+		5A1444742875EEC300CC40A2 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
 				5A1444752875EEC300CC40A2 /* Network */,
@@ -231,7 +231,7 @@
 				5A1444792875EEC300CC40A2 /* UIImageView+Download+Extension.swift */,
 				5A14447A2875EEC300CC40A2 /* JSONHelper.swift */,
 			);
-			path = common;
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		5A1444752875EEC300CC40A2 /* Network */ = {

@@ -2,7 +2,7 @@ import Foundation
 
 struct MovieModel: Decodable {
     let adult: Bool?
-    let backdropPath, belongsToCollection: String?
+    let backdropPath: String?
     let budget: Int?
     let genres: [GenreModel]?
     let homepage: String?
@@ -22,7 +22,6 @@ struct MovieModel: Decodable {
     enum CodingKeys: String, CodingKey {
         case adult
         case backdropPath = "backdrop_path"
-        case belongsToCollection = "belongs_to_collection"
         case budget, genres, homepage, id
         case imdbID = "imdb_id"
         case originalLanguage = "original_language"

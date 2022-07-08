@@ -20,6 +20,14 @@ final class MovieInfoViewCell: UITableViewCell, NibLoadable, Reusable {
         super.awakeFromNib()
         backgroundColor = .primary
         selectionStyle = .none
+        genreDescriptionLabel.layer.cornerRadius = genreDescriptionLabel.bounds.height / 2
+//        genreDescriptionLabel.backgroundColor = UIColor(red: <#T##CGFloat#>, green: <#T##CGFloat#>, blue: <#T##CGFloat#>, alpha: <#T##CGFloat#>)
+        genreDescriptionLabel.setTitleColor(.white, for: .normal)
+    }
+    
+    func update(with movie: MovieModel?) {
+        dateLabel.text = movie?.releaseDate
+        genreDescriptionLabel.setTitle(movie?.genres?.first?.name, for: .normal)
     }
     
 }
