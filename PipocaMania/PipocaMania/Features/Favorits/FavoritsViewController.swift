@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Reusable
 
 class FavoritsViewController: UIViewController {
     
@@ -17,6 +18,8 @@ class FavoritsViewController: UIViewController {
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
+        tableView.backgroundColor = .primary
+        tableView.register(cellType: FavoriteTableViewCell.self)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -42,9 +45,23 @@ extension FavoritsViewController: UITableViewDelegate, UITableViewDataSource {
             errorCell.textLabel?.text = "não há filmes"
             return errorCell
         }
-        let newCell = UITableViewCell()
-        newCell.imageView?.image = UIImage(data: listaDeFilmesSalvos[indexPath.row].imagem!)
-        newCell.textLabel?.text = listaDeFilmesSalvos[indexPath.row].titulo
-        return newCell
+        let cell: FavoriteTableViewCell = tableView.dequeueReusableCell(for: indexPath)
+        cell.favoriteImageView?.image = UIImage(data: listaDeFilmesSalvos[indexPath.row].imagem!)
+        cell.filmeTitleLabel?.text = listaDeFilmesSalvos[indexPath.row].titulo
+        
+        cell.descriptionLabel.text = listaDeFilmesSalvos[indexPath.row].titulo
+        return cell
     }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+           // Make the first row larger to accommodate a custom cell.
+        if listaDeFilmesSalvos.isEmpty {
+              return 80
+           }
+
+           // Use the default size for all other rows.
+           return 240
+
+    }
+    
 }

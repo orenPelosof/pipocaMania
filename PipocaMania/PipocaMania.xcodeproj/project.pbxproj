@@ -14,6 +14,8 @@
 		1239CA832860F7230097DB0F /* ServicoHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1239CA822860F7230097DB0F /* ServicoHome.swift */; };
 		1239CA852860F7540097DB0F /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1239CA842860F7540097DB0F /* HomeViewModel.swift */; };
 		124D24372863B88400275183 /* CadastroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124D24362863B88400275183 /* CadastroViewController.swift */; };
+		128D710C2879CC5400896D92 /* FavoriteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 128D710A2879CC5400896D92 /* FavoriteTableViewCell.xib */; };
+		128D710D2879CC5400896D92 /* FavoriteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128D710B2879CC5400896D92 /* FavoriteTableViewCell.swift */; };
 		129B3E1828511C9B008799C4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129B3E1728511C9B008799C4 /* HomeViewController.swift */; };
 		129B3E1A28511EEE008799C4 /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129B3E1928511EEE008799C4 /* HomeCollectionViewCell.swift */; };
 		12AE38262853E30E008D29D4 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12AE38222853E30D008D29D4 /* Login.storyboard */; };
@@ -85,6 +87,8 @@
 		1239CA822860F7230097DB0F /* ServicoHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicoHome.swift; sourceTree = "<group>"; };
 		1239CA842860F7540097DB0F /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		124D24362863B88400275183 /* CadastroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadastroViewController.swift; sourceTree = "<group>"; };
+		128D710A2879CC5400896D92 /* FavoriteTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FavoriteTableViewCell.xib; sourceTree = "<group>"; };
+		128D710B2879CC5400896D92 /* FavoriteTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteTableViewCell.swift; sourceTree = "<group>"; };
 		129B3E1728511C9B008799C4 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		129B3E1928511EEE008799C4 /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
 		12AE38222853E30D008D29D4 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Login.storyboard; path = PipocaMania/Features/Login/Login.storyboard; sourceTree = SOURCE_ROOT; };
@@ -196,6 +200,8 @@
 		12D66404287384F900FCF6B1 /* Favorits */ = {
 			isa = PBXGroup;
 			children = (
+				128D710B2879CC5400896D92 /* FavoriteTableViewCell.swift */,
+				128D710A2879CC5400896D92 /* FavoriteTableViewCell.xib */,
 				12D664052873851500FCF6B1 /* Favorits.storyboard */,
 				12D664072873852E00FCF6B1 /* FavoritsViewController.swift */,
 				12D6640928738C2D00FCF6B1 /* DataBaseHelper.swift */,
@@ -557,6 +563,7 @@
 				5A7283E0284502A700242621 /* Assets.xcassets in Resources */,
 				5A8ACECE284026720018E385 /* LaunchScreen.storyboard in Resources */,
 				5A786965284163F5001319B3 /* Filter.storyboard in Resources */,
+				128D710C2879CC5400896D92 /* FavoriteTableViewCell.xib in Resources */,
 				5A78696B28416424001319B3 /* SignUp.storyboard in Resources */,
 				5A1444A72875EEC300CC40A2 /* RelatedMoviesViewCell.xib in Resources */,
 				5A1444A12875EEC300CC40A2 /* MoviesCollectionViewCell.xib in Resources */,
@@ -591,6 +598,7 @@
 				12D6640A28738C2D00FCF6B1 /* DataBaseHelper.swift in Sources */,
 				5A1444AB2875EEC300CC40A2 /* MovieHeaderView.swift in Sources */,
 				5A7283D92844EF4700242621 /* ProfileHeaderView.swift in Sources */,
+				128D710D2879CC5400896D92 /* FavoriteTableViewCell.swift in Sources */,
 				5A1444A82875EEC300CC40A2 /* MovieInfoViewCell.swift in Sources */,
 				5A14449C2875EEC300CC40A2 /* JSONHelper.swift in Sources */,
 				5A14449A2875EEC300CC40A2 /* Data+PrettyPrintedJSONString+Extension.swift in Sources */,

@@ -62,11 +62,14 @@
         <scene sceneID="Z1Q-Sh-9lf">
             <objects>
                 <viewControllerPlaceholder storyboardName="Favorits" id="2IJ-vd-riy" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="nsy-eK-SnL"/>
+                    <tabBarItem key="tabBarItem" title="" image="star.fill" catalog="system" id="nsy-eK-SnL"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xOs-eb-wFn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="79" y="80"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="star.fill" catalog="system" width="128" height="116"/>
+    </resources>
 </document>

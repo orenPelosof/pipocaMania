@@ -28,7 +28,7 @@ class HomeCollectionViewCell: UICollectionViewCell {
     @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer) {
         if let imageData = posterFilme.image?.pngData() {
             
-            DataBaseHelper.shareInstance.saveFilm(data: imageData, title: textoFilme.text!)
+        DataBaseHelper.shareInstance.saveFilm(data: imageData, title: textoFilme.text!)
         }
     }
     

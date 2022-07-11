@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vPe-wA-AzO">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vPe-wA-AzO">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -18,22 +19,22 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ieS-hI-Kcm">
-                                <rect key="frame" x="0.0" y="336" width="414" height="474"/>
+                                <rect key="frame" x="0.0" y="331" width="414" height="479"/>
                                 <color key="backgroundColor" red="0.082699395719999999" green="0.077885679900000004" blue="0.1176521853" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="i7R-MJ-qDC">
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="20" minimumInteritemSpacing="20" id="i7R-MJ-qDC">
                                     <size key="itemSize" width="346" height="467"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="10"/>
                                 </collectionViewFlowLayout>
                                 <activityIndicatorView key="backgroundView" autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" contentMode="center" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" id="HgU-kC-iNp">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="474"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="479"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="tintColor" red="0.96862745100000003" green="0.80784313730000001" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </activityIndicatorView>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="filmeCell" id="VpC-zn-Cd8" customClass="HomeCollectionViewCell" customModule="PipocaMania" customModuleProvider="target">
-                                        <rect key="frame" x="10" y="7.5" width="346" height="459"/>
+                                        <rect key="frame" x="10" y="10" width="346" height="459"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Lhc-qN-YYx">
                                             <rect key="frame" x="0.0" y="0.0" width="346" height="459"/>
@@ -151,7 +152,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yfX-rD-5TP">
-                                <rect key="frame" x="24" y="289" width="121.5" height="27"/>
+                                <rect key="frame" x="24" y="284" width="121.5" height="27"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Tendências">
                                         <attributes>
@@ -163,7 +164,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <searchBar contentMode="redraw" barStyle="blackTranslucent" searchBarStyle="minimal" text="" placeholder="Procure um título" translatesAutoresizingMaskIntoConstraints="NO" id="htV-za-l7G">
-                                <rect key="frame" x="20" y="203" width="374" height="56"/>
+                                <rect key="frame" x="20" y="203" width="374" height="51"/>
                                 <color key="backgroundColor" red="0.083906792100000002" green="0.07849747688" blue="0.1236113533" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="barTintColor" red="0.74941140409999996" green="0.32464498279999998" blue="0.25434735419999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -217,7 +218,7 @@
         <scene sceneID="DKe-aW-hoY">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vPe-wA-AzO" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="HomeApp" id="g2q-GP-dCL"/>
+                    <tabBarItem key="tabBarItem" title="" image="house.fill" catalog="system" id="g2q-GP-dCL"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="tPV-U8-Irg">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -237,9 +238,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="HomeApp" width="25" height="23"/>
         <image name="LigaDaJustica" width="810" height="1200"/>
         <image name="Pipoca Mania" width="144" height="23"/>
+        <image name="house.fill" catalog="system" width="128" height="106"/>
         <image name="star.fill" catalog="system" width="128" height="116"/>
         <systemColor name="systemGray4Color">
             <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

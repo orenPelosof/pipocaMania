@@ -18,16 +18,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LaunchScreen" translatesAutoresizingMaskIntoConstraints="NO" id="Kfl-ba-Gu8">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <rect key="frame" x="0.0" y="-50" width="414" height="996"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Kfl-ba-Gu8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="FnO-l2-45n"/>
-                            <constraint firstItem="Kfl-ba-Gu8" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="MS6-eI-eNa"/>
+                            <constraint firstItem="Kfl-ba-Gu8" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" constant="-50" id="MS6-eI-eNa"/>
                             <constraint firstItem="Kfl-ba-Gu8" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="WIl-zP-kUy"/>
-                            <constraint firstAttribute="bottom" secondItem="Kfl-ba-Gu8" secondAttribute="bottom" id="ffP-BA-2Ne"/>
+                            <constraint firstAttribute="bottom" secondItem="Kfl-ba-Gu8" secondAttribute="bottom" constant="-50" id="ffP-BA-2Ne"/>
                         </constraints>
                     </view>
                 </viewController>
