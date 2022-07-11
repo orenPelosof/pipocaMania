@@ -21,12 +21,17 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ieS-hI-Kcm">
                                 <rect key="frame" x="0.0" y="331" width="414" height="479"/>
                                 <color key="backgroundColor" red="0.082699395719999999" green="0.077885679900000004" blue="0.1176521853" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="i7R-MJ-qDC">
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="20" minimumInteritemSpacing="20" id="i7R-MJ-qDC">
                                     <size key="itemSize" width="346" height="467"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="10"/>
                                 </collectionViewFlowLayout>
+                                <activityIndicatorView key="backgroundView" autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" contentMode="center" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" id="HgU-kC-iNp">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="479"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="tintColor" red="0.96862745100000003" green="0.80784313730000001" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </activityIndicatorView>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="filmeCell" id="VpC-zn-Cd8" customClass="HomeCollectionViewCell" customModule="PipocaMania" customModuleProvider="target">
                                         <rect key="frame" x="10" y="10" width="346" height="459"/>
@@ -190,6 +195,8 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="CollectionView" destination="ieS-hI-Kcm" id="m1z-lf-4mW"/>
+                        <outlet property="loading" destination="HgU-kC-iNp" id="uA9-Xy-edy"/>
+                        <outlet property="searchBar" destination="htV-za-l7G" id="U5d-g2-h5u"/>
                         <segue destination="ySh-uS-9M7" kind="show" identifier="detailView" id="2I4-5R-TIu"/>
                     </connections>
                 </viewController>
@@ -197,10 +204,10 @@
             </objects>
             <point key="canvasLocation" x="1246.376811594203" y="97.767857142857139"/>
         </scene>
-        <!--Detail-->
+        <!--MovieDetail-->
         <scene sceneID="L71-QF-bX3">
             <objects>
-                <viewControllerPlaceholder storyboardName="Detail" id="ySh-uS-9M7" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="MovieDetail" id="ySh-uS-9M7" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="3h6-AD-kv4"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ev5-zJ-rLe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -211,7 +218,7 @@
         <scene sceneID="DKe-aW-hoY">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vPe-wA-AzO" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="HomeApp" id="g2q-GP-dCL"/>
+                    <tabBarItem key="tabBarItem" title="" image="house.fill" catalog="system" id="g2q-GP-dCL"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="tPV-U8-Irg">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -231,9 +238,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="HomeApp" width="25" height="23"/>
         <image name="LigaDaJustica" width="810" height="1200"/>
         <image name="Pipoca Mania" width="144" height="23"/>
+        <image name="house.fill" catalog="system" width="128" height="106"/>
         <image name="star.fill" catalog="system" width="128" height="116"/>
         <systemColor name="systemGray4Color">
             <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

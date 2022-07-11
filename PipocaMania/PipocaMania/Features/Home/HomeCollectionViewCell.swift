@@ -17,6 +17,21 @@ class HomeCollectionViewCell: UICollectionViewCell {
     @IBOutlet var notaFilme: UILabel!
     @IBOutlet var posterFilme: UIImageView!
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        // Initialization code
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
+        estrelaFilme.isUserInteractionEnabled = true
+        estrelaFilme.addGestureRecognizer(tapGestureRecognizer)
+    }
+    
+    @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer) {
+        if let imageData = posterFilme.image?.pngData() {
+            
+        DataBaseHelper.shareInstance.saveFilm(data: imageData, title: textoFilme.text!)
+        }
+    }
+    
 }
 
 

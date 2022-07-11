@@ -19,7 +19,7 @@
                         <viewLayoutGuide key="safeArea" id="VVA-Qf-50U"/>
                         <color key="backgroundColor" red="0.08235294118" green="0.078431372550000003" blue="0.1215686275" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Profile" id="dxG-ng-17A"/>
+                    <navigationItem key="navigationItem" title="Perfil" id="dxG-ng-17A"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yM8-jp-6C5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -29,7 +29,7 @@
         <scene sceneID="MYd-IN-a5n">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="JGc-g3-R22" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="UserApp" id="7HL-yI-PC0"/>
+                    <tabBarItem key="tabBarItem" title="" image="person.fill" catalog="system" id="7HL-yI-PC0"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="J0o-Vo-lXE">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -51,7 +51,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="UserApp" width="32" height="29.5"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
         <namedColor name="primary">
             <color red="0.082352941176470587" green="0.078431372549019607" blue="0.12156862745098039" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

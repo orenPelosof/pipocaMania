@@ -9,13 +9,13 @@ struct ProfileModel {
 extension ProfileModel {
     static func makeProfileModel() -> ProfileModel {
         .init(
-            name: "José Roberto",
+            name: "Beto",
             imageName: "perfil",
             infos: [
-                "Renomear",
-                "Trocar Senha",
-                "E-mail",
-                "Telefone"
+                "José Roberto",
+                "(11) 00000-0000",
+                "teste@gmail.com",
+                "São Paulo"
             ]
         )
     }

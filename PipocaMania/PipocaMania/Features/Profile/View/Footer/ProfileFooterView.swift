@@ -13,7 +13,7 @@ final class ProfileFooterView: UITableViewHeaderFooterView, NibLoadable, Reusabl
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        registerButton.setTitle("Novo por aqui ? Resgistre-se", for: .normal)
+        registerButton.setTitle("Alterar dados", for: .normal)
         registerButton.setTitleColor(.secondary, for: .normal)
         registerButton.addTarget(self, action: #selector(regiter), for: .touchUpInside)
     }

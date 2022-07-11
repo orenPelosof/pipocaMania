@@ -8,22 +8,12 @@
 import UIKit
 import Reusable
 
-protocol FilterViewModelDelegate {
-    func nomearCategoriasLabel()
-}
-
 
 class FilterViewModel: UIViewController {
 
     @IBOutlet var categoriasPickerView: UIPickerView!
     
-    let categoriasDisponiveis: [String] = ["Todas", "Ação", "Animação", "Aventura", "Terror", "Romance", "Ficção Científica", "Comédia", "Temas adultos", "Para toda família", "Infantil"]
-    
-     var delegate: FilterViewModelDelegate? = nil
-    
-    
-   
-    
+    let viewModel: CategoryViewModel = CategoryViewModel()
     override func viewDidLoad() {
         super.viewDidLoad()
         categoriasPickerView.setValue(UIColor.white, forKeyPath: "textColor")
@@ -31,29 +21,51 @@ class FilterViewModel: UIViewController {
         
         categoriasPickerView.delegate = self
         categoriasPickerView.dataSource = self
-
+        
+        viewModel.delegate = self
+        viewModel.consultaCategoria()
         // Do any additional setup after loading the view.
     }
     
 
 }
 
+extension FilterViewModel: CategoryViewModelDelegate {
+    func atualizaFilmes() {
+        
+    }
+    
+    func finishedFiltering() {
+        
+    }
+    
+    func searchIsEmpty() {
+        
+    }
+    
+    func atualizaCategorias() {
+        categoriasPickerView.reloadAllComponents()
+    }
+    
+    
+}
+
 extension FilterViewModel: UIPickerViewDelegate {
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        let genero = categoriasDisponiveis[row]
+        let genero = viewModel.listaDeCategorias[row].name
         print(genero)
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return categoriasDisponiveis[row]
+        return viewModel.listaDeCategorias[row].name
     }
 }
 
 extension FilterViewModel: UIPickerViewDataSource {
     
     func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
-            let titleData = "\(categoriasDisponiveis[row])"
+        let titleData = "\(viewModel.listaDeCategorias[row].name)"
             let myTitle = NSAttributedString(string: titleData, attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
 
             return myTitle
@@ -64,7 +76,7 @@ extension FilterViewModel: UIPickerViewDataSource {
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-       return categoriasDisponiveis.count
+        return viewModel.listaDeCategorias.count
     }
     
 }

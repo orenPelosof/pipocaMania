@@ -1,0 +1,28 @@
+protocol MovieDetailsViewModelDelegate: AnyObject {
+    func showDetails(of movie: MovieModel?)
+    func showEmptyFieldError()
+    func showError(message: String?)
+}
+
+final class MovieDetailsViewModel {
+    weak var delegate: MovieDetailsViewModelDelegate?
+    
+    private let service: MovieDetailsServiceProtocol
+    
+    init(service: MovieDetailsServiceProtocol = MovieDetailsService()) {
+        self.service = service
+    }
+    
+    func getMovieDetails(id: Int) {
+        service.getMovieDetails(id: id) { [weak self] result in
+            guard let self = self else { return }
+            switch result {
+            case let .success(movie):
+                self.delegate?.showDetails(of: movie)
+                
+            case let .failure(error):
+                self.delegate?.showError(message: error.localizedDescription)
+            }
+        }
+    }
+}
