@@ -39,7 +39,7 @@ class HomeViewModel {
     }
     
     func retornaImagem(path: String) {
-        guard let urlImage = URL(string: "https://image.tmdb.org/t/p/w500\(path)") else { return }
+        guard let urlImage = URL(string: "https://image.tmdb.org/t/p/w100\(path)") else { return }
         guard let data = try? Data(contentsOf: urlImage) else { return }
         let imagem = UIImage(data: data)!
         

@@ -73,6 +73,8 @@
 		5AEAA9E5284EDD23000A342B /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEAA9E4284EDD23000A342B /* ProfileModel.swift */; };
 		5AEAA9EE284EDF5C000A342B /* ProfileFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEAA9ED284EDF5C000A342B /* ProfileFooterView.swift */; };
 		5AEAA9F2284EDF77000A342B /* ProfileFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AEAA9F1284EDF77000A342B /* ProfileFooterView.xib */; };
+		8B700EFA287F0E84004686DB /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B700EF9287F0E84004686DB /* User.swift */; };
+		8B700EFC287F0F17004686DB /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B700EFB287F0F17004686DB /* Authentication.swift */; };
 		FA3CCE632852F55900DF3005 /* Titulos.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3CCE622852F55900DF3005 /* Titulos.swift */; };
 		FA6EE6FF28505A5600D4DE21 /* FilterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6EE6FE28505A5600D4DE21 /* FilterCollectionViewCell.swift */; };
 		FA82EE8B28512B1D00167730 /* FilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA82EE8A28512B1D00167730 /* FilterViewModel.swift */; };
@@ -92,9 +94,7 @@
 		129B3E1728511C9B008799C4 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		129B3E1928511EEE008799C4 /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
 		12AE38222853E30D008D29D4 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Login.storyboard; path = PipocaMania/Features/Login/Login.storyboard; sourceTree = SOURCE_ROOT; };
-		12AE38232853E30D008D29D4 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = PipocaMania/Features/Login/LoginViewController.swift; sourceTree = SOURCE_ROOT; };
-		12AE38242853E30D008D29D4 /* Login.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Login.swift; path = PipocaMania/Features/Login/Login.swift; sourceTree = SOURCE_ROOT; };
-		12AE38252853E30E008D29D4 /* TelaLogIn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TelaLogIn.swift; path = PipocaMania/Features/Login/TelaLogIn.swift; sourceTree = SOURCE_ROOT; };
+		12AE38232853E30D008D29D4 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = PipocaMania/Features/Login/View/LoginViewController.swift; sourceTree = SOURCE_ROOT; };
 		12D664022873830800FCF6B1 /* FilmeModelData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FilmeModelData.xcdatamodel; sourceTree = "<group>"; };
 		12D664052873851500FCF6B1 /* Favorits.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Favorits.storyboard; sourceTree = "<group>"; };
 		12D664072873852E00FCF6B1 /* FavoritsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritsViewController.swift; sourceTree = "<group>"; };
@@ -149,6 +149,8 @@
 		5AEAA9E4284EDD23000A342B /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
 		5AEAA9ED284EDF5C000A342B /* ProfileFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileFooterView.swift; sourceTree = "<group>"; };
 		5AEAA9F1284EDF77000A342B /* ProfileFooterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileFooterView.xib; sourceTree = "<group>"; };
+		8B700EF9287F0E84004686DB /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		8B700EFB287F0F17004686DB /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
 		8BC8B56C28459D3E00468C9E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		FA3CCE622852F55900DF3005 /* Titulos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Titulos.swift; sourceTree = "<group>"; };
 		FA6EE6FE28505A5600D4DE21 /* FilterCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -190,9 +192,9 @@
 			isa = PBXGroup;
 			children = (
 				12AE38222853E30D008D29D4 /* Login.storyboard */,
-				12AE38242853E30D008D29D4 /* Login.swift */,
-				12AE38232853E30D008D29D4 /* LoginViewController.swift */,
-				12AE38252853E30E008D29D4 /* TelaLogIn.swift */,
+				8B700EFD287F3460004686DB /* Model login */,
+				8B700EFE287F3472004686DB /* View */,
+				8B700EFF287F34BB004686DB /* ViewModel */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -488,6 +490,30 @@
 			path = Footer;
 			sourceTree = "<group>";
 		};
+		8B700EFD287F3460004686DB /* Model login */ = {
+			isa = PBXGroup;
+			children = (
+				8B700EF9287F0E84004686DB /* User.swift */,
+			);
+			path = "Model login";
+			sourceTree = "<group>";
+		};
+		8B700EFE287F3472004686DB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				12AE38232853E30D008D29D4 /* LoginViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8B700EFF287F34BB004686DB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				8B700EFB287F0F17004686DB /* Authentication.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		FA3CCE612852CAEF00DF3005 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -594,6 +620,7 @@
 			files = (
 				5AEAA9D8284ED396000A342B /* ProfileView.swift in Sources */,
 				5A1444992875EEC300CC40A2 /* Endpoint.swift in Sources */,
+				8B700EFA287F0E84004686DB /* User.swift in Sources */,
 				122379A62874F627006DBF53 /* FilterService.swift in Sources */,
 				12D6640A28738C2D00FCF6B1 /* DataBaseHelper.swift in Sources */,
 				5A1444AB2875EEC300CC40A2 /* MovieHeaderView.swift in Sources */,
@@ -638,6 +665,7 @@
 				5A1444A42875EEC300CC40A2 /* MovieSynopsisViewCell.swift in Sources */,
 				5A1444972875EEC300CC40A2 /* MovieDetailsViewModel.swift in Sources */,
 				5A1444A32875EEC300CC40A2 /* RelatedMoviesViewCell.swift in Sources */,
+				8B700EFC287F0F17004686DB /* Authentication.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -777,7 +805,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = BT95VNV3L2;
+				DEVELOPMENT_TEAM = 9M8MCM84Z4;
 				INFOPLIST_FILE = PipocaMania/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -796,7 +824,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = BT95VNV3L2;
+				DEVELOPMENT_TEAM = 9M8MCM84Z4;
 				INFOPLIST_FILE = PipocaMania/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
