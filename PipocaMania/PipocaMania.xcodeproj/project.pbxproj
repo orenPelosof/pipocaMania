@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D606D2B28833820000C584E /* SimilarMoviesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D606D2A28833820000C584E /* SimilarMoviesModel.swift */; };
 		122379A62874F627006DBF53 /* FilterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122379A52874F627006DBF53 /* FilterService.swift */; };
 		122379A82874FADB006DBF53 /* CategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122379A72874FADB006DBF53 /* CategoryViewModel.swift */; };
 		122379AA287506F3006DBF53 /* CategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122379A9287506F3006DBF53 /* CategoryModel.swift */; };
@@ -80,6 +81,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0D606D2A28833820000C584E /* SimilarMoviesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimilarMoviesModel.swift; sourceTree = "<group>"; };
 		122379A52874F627006DBF53 /* FilterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterService.swift; sourceTree = "<group>"; };
 		122379A72874FADB006DBF53 /* CategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewModel.swift; sourceTree = "<group>"; };
 		122379A9287506F3006DBF53 /* CategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryModel.swift; sourceTree = "<group>"; };
@@ -301,6 +303,7 @@
 				5A1444902875EEC300CC40A2 /* SpokenLanguageModel.swift */,
 				5A1444912875EEC300CC40A2 /* GenreModel.swift */,
 				5A1444922875EEC300CC40A2 /* DetailModel.swift */,
+				0D606D2A28833820000C584E /* SimilarMoviesModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -614,6 +617,7 @@
 				5A7283B42844B7E900242621 /* ProfileViewCell.swift in Sources */,
 				5AEAA9EE284EDF5C000A342B /* ProfileFooterView.swift in Sources */,
 				5A1444A22875EEC300CC40A2 /* MoviesCollectionViewCell.swift in Sources */,
+				0D606D2B28833820000C584E /* SimilarMoviesModel.swift in Sources */,
 				5A1444AF2875EEC300CC40A2 /* DetailModel.swift in Sources */,
 				5A1444A92875EEC300CC40A2 /* MovieDetailsView.swift in Sources */,
 				FA8CAEF62845014700FB9BEA /* FilterViewController.swift in Sources */,
