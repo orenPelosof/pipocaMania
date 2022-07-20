@@ -21,9 +21,6 @@
                                 <rect key="frame" x="107" y="424" width="200" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="Kje-vp-wBT"/>
-                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="48" id="ani-fi-caL"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="48" id="f0j-KR-13z"/>
-                                    <constraint firstAttribute="width" secondItem="cah-I4-Xe6" secondAttribute="height" multiplier="25:6" id="s0j-Wr-9dz"/>
                                     <constraint firstAttribute="width" constant="200" id="xbG-N4-Xgw"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="37"/>
@@ -110,7 +107,6 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="registerButton:" destination="lyK-ka-u2y" eventType="touchUpInside" id="rt1-1n-ljo"/>
-                                    <segue destination="Kxk-Zd-fox" kind="show" id="SAs-dx-K7c"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sVA-dz-LXQ" customClass="GIDSignInButton">
@@ -124,15 +120,22 @@
                                     <action selector="loginGoogleButtonAction:" destination="lyK-ka-u2y" eventType="touchUpInside" id="abC-hF-l66"/>
                                 </connections>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jrV-hq-XFL" customClass="FBSDKButton">
+                                <rect key="frame" x="79" y="680" width="256" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Iqi-z3-Nsb"/>
                         <color key="backgroundColor" red="0.082352941176470587" green="0.078431372549019607" blue="0.12156862745098039" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="K6z-M6-sDV" firstAttribute="leading" secondItem="Iqi-z3-Nsb" secondAttribute="leading" constant="54" id="2JZ-7p-W0f"/>
                             <constraint firstItem="K6z-M6-sDV" firstAttribute="top" secondItem="Iqi-z3-Nsb" secondAttribute="top" constant="124" id="4dA-dk-C9D"/>
+                            <constraint firstItem="jrV-hq-XFL" firstAttribute="top" secondItem="sVA-dz-LXQ" secondAttribute="bottom" constant="58" id="5dJ-OS-GrG"/>
                             <constraint firstItem="ANf-f1-XqL" firstAttribute="leading" secondItem="Iqi-z3-Nsb" secondAttribute="leading" constant="54" id="7A0-gQ-bvj"/>
                             <constraint firstItem="cah-I4-Xe6" firstAttribute="centerX" secondItem="DkH-if-C1y" secondAttribute="centerX" id="7QH-HN-M2W"/>
                             <constraint firstItem="HcS-nD-L1v" firstAttribute="leading" secondItem="Iqi-z3-Nsb" secondAttribute="leading" constant="25" id="B1T-Pf-RBl"/>
+                            <constraint firstItem="Iqi-z3-Nsb" firstAttribute="trailing" secondItem="jrV-hq-XFL" secondAttribute="trailing" constant="79" id="Cx4-WL-Mvp"/>
                             <constraint firstItem="1wL-FT-moT" firstAttribute="top" secondItem="cah-I4-Xe6" secondAttribute="bottom" constant="25" id="Di2-vO-ppg"/>
                             <constraint firstItem="D3D-sU-zYb" firstAttribute="top" secondItem="UsM-Gm-M5X" secondAttribute="bottom" constant="45" id="E1g-cK-s1n"/>
                             <constraint firstItem="HcS-nD-L1v" firstAttribute="top" secondItem="Iqi-z3-Nsb" secondAttribute="top" constant="38" id="Ed4-zx-Tfg"/>
@@ -142,6 +145,7 @@
                             <constraint firstItem="sVA-dz-LXQ" firstAttribute="top" secondItem="1wL-FT-moT" secondAttribute="bottom" constant="38" id="ZNF-Pv-OaX"/>
                             <constraint firstItem="D3D-sU-zYb" firstAttribute="leading" secondItem="Iqi-z3-Nsb" secondAttribute="leading" constant="36" id="a3a-mn-p9h"/>
                             <constraint firstItem="1wL-FT-moT" firstAttribute="leading" secondItem="Iqi-z3-Nsb" secondAttribute="leading" constant="118" id="dak-jM-PrB"/>
+                            <constraint firstItem="jrV-hq-XFL" firstAttribute="leading" secondItem="Iqi-z3-Nsb" secondAttribute="leading" constant="79" id="eXe-m5-TqA"/>
                             <constraint firstItem="Iqi-z3-Nsb" firstAttribute="trailing" secondItem="ANf-f1-XqL" secondAttribute="trailing" constant="122" id="fJR-em-4m1"/>
                             <constraint firstItem="Iqi-z3-Nsb" firstAttribute="bottom" secondItem="sVA-dz-LXQ" secondAttribute="bottom" constant="240" id="g0W-HO-u7p"/>
                             <constraint firstItem="UsM-Gm-M5X" firstAttribute="top" secondItem="Iqi-z3-Nsb" secondAttribute="top" constant="159" id="kbF-ke-ikA"/>
@@ -150,6 +154,7 @@
                             <constraint firstItem="ANf-f1-XqL" firstAttribute="top" secondItem="UsM-Gm-M5X" secondAttribute="bottom" constant="9" id="oo9-Xb-9Yf"/>
                             <constraint firstItem="sVA-dz-LXQ" firstAttribute="leading" secondItem="Iqi-z3-Nsb" secondAttribute="leading" constant="79" id="rlS-xO-e1I"/>
                             <constraint firstItem="Iqi-z3-Nsb" firstAttribute="trailing" secondItem="UsM-Gm-M5X" secondAttribute="trailing" constant="35" id="uLd-XF-HNJ"/>
+                            <constraint firstItem="Iqi-z3-Nsb" firstAttribute="bottom" secondItem="jrV-hq-XFL" secondAttribute="bottom" constant="151" id="ujx-zN-nwv"/>
                             <constraint firstItem="Iqi-z3-Nsb" firstAttribute="trailing" secondItem="HcS-nD-L1v" secondAttribute="trailing" constant="25" id="vAt-EN-xJJ"/>
                             <constraint firstItem="Iqi-z3-Nsb" firstAttribute="trailing" secondItem="D3D-sU-zYb" secondAttribute="trailing" constant="36" id="xoO-gj-1uN"/>
                         </constraints>
@@ -173,16 +178,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zf4-AF-N8W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="934" y="96"/>
-        </scene>
-        <!--SignUp-->
-        <scene sceneID="yFD-w4-7xi">
-            <objects>
-                <viewControllerPlaceholder storyboardName="SignUp" id="Kxk-Zd-fox" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="56E-Wd-9CI"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="gOb-ar-D4J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="801" y="145"/>
         </scene>
     </scenes>
     <resources>

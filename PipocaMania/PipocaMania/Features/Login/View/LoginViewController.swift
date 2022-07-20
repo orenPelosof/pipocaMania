@@ -10,6 +10,7 @@ import UIKit
 import FirebaseCore
 import GoogleSignIn
 import FirebaseAuth
+import FacebookLogin
 
 class LoginViewController: UIViewController, UITextFieldDelegate {
     
@@ -23,6 +24,11 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let loginButton = FBLoginButton()
+                loginButton.center = view.center
+                view.addSubview(loginButton)
+        
     self.emailTextField.delegate = self
     self.senhaTextField.delegate = self
         }

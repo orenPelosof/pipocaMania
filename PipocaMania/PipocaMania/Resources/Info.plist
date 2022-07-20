@@ -48,16 +48,21 @@
 					<string>Login</string>
 				</dict>
 			</array>
+            
 		</dict>
-	</dict>
+    </dict>
+    
+    
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
+    
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
+        
 		<string>armv7</string>
 	</array>
 	<key>UIStatusBarStyle</key>
@@ -77,5 +82,24 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
-</dict>
+    
+    
+    
+    <key>CFBundleURLTypes</key>
+    <array>
+      <dict>
+      <key>CFBundleURLSchemes</key>
+      <array>
+        <string>fb557442786033019</string>
+      </array>
+      </dict>
+    </array>
+    <key>FacebookAppID</key>
+    <string>557442786033019</string>
+    <key>FacebookClientToken</key>
+    <string>2f1c8500a6d104fada6eac39bae3dca1</string>
+    <key>FacebookDisplayName</key>
+    <string>PipocaMania</string>
+    
+    </dict>
 </plist>

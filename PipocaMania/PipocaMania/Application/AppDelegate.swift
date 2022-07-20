@@ -9,6 +9,7 @@ import UIKit
 import CoreData
 import FirebaseCore
 import GoogleSignIn
+import FacebookCore
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -19,6 +20,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
        
         UIApplication.shared.statusBarStyle = .lightContent
         FirebaseApp.configure()
+        
+        ApplicationDelegate.shared.application(
+                    application,
+                    didFinishLaunchingWithOptions: launchOptions
+                )
+        
+        
         
         return true
     }

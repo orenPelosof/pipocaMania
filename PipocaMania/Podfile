@@ -9,6 +9,8 @@ target 'PipocaMania' do
 
         pod 'FirebaseAuth'
         pod 'GoogleSignIn'
+        pod 'FacebookCore'
+        pod 'FacebookLogin'
 
 end
 
