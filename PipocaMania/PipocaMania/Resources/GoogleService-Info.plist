@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>554854826056-qe7991qls0r0bj20q9a5udsdj9t5tq4a.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.554854826056-qe7991qls0r0bj20q9a5udsdj9t5tq4a</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAKtB7uuroJMnG0G5iY2_v2EssCPyW2WrA</string>
+	<key>GCM_SENDER_ID</key>
+	<string>554854826056</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>Tiago-Deanna.PipocaMania</string>
+	<key>PROJECT_ID</key>
+	<string>pipocamanialogin</string>
+	<key>STORAGE_BUCKET</key>
+	<string>pipocamanialogin.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:554854826056:ios:950daf50c41686f46a987d</string>
+</dict>
+</plist>

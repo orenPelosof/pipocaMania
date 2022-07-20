@@ -7,8 +7,13 @@
 
 import Foundation
 import UIKit
+import FirebaseCore
+import GoogleSignIn
+import FirebaseAuth
 
 class LoginViewController: UIViewController, UITextFieldDelegate {
+    
+    @IBOutlet weak var signInButton: GIDSignInButton!
     
     
     
@@ -21,6 +26,51 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     self.emailTextField.delegate = self
     self.senhaTextField.delegate = self
         }
+    
+    
+    @IBAction func loginGoogleButtonAction(_ sender: Any) {
+        loginGoogle()
+    }
+    
+    private func loginGoogle() {
+        guard let clientID = FirebaseApp.app()?.options.clientID else { return }
+
+        // Create Google Sign In configuration object.
+        let config = GIDConfiguration(clientID: clientID)
+
+        // Start the sign in flow!
+        GIDSignIn.sharedInstance.signIn(with: config, presenting: self) { [unowned self] user, error in
+
+          if let error = error {
+            // ...
+            return
+          }
+
+          guard
+            let authentication = user?.authentication,
+            let idToken = authentication.idToken
+          else {
+            return
+          }
+
+          let credential = GoogleAuthProvider.credential(withIDToken: idToken,
+                                                         accessToken: authentication.accessToken)
+
+          // ...
+            
+            Auth.auth().signIn(with: credential) { authResult, error in
+                if let error = error {
+                  }
+                  // ...
+                  return
+                }
+                // User is signed in
+                // ...
+            }
+            
+        }
+    
+
     
  //Botao entrar para navegar para a proxima pagina
     
