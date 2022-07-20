@@ -21,7 +21,7 @@ final class MovieInfoViewCell: UITableViewCell, NibLoadable, Reusable {
         backgroundColor = .primary
         selectionStyle = .none
         genreDescriptionLabel.layer.cornerRadius = genreDescriptionLabel.bounds.height / 2
-        genreDescriptionLabel.backgroundColor = UIColor.white.withAlphaComponent(0.3)
+        genreDescriptionLabel.backgroundColor = UIColor.black.withAlphaComponent(0.3)
         genreDescriptionLabel.setTitleColor(.white, for: .normal)
         genreDescriptionLabel.dropShadow()
     }
@@ -37,8 +37,8 @@ extension UIView {
 
   func dropShadow() {
       layer.shadowColor = UIColor.white.cgColor
-      layer.shadowOffset = CGSize(width: 5, height: 4)
-      layer.shadowOpacity = 0.5
-      layer.shadowRadius = 5
+      layer.shadowOffset = CGSize(width: 1, height: 1)
+      layer.shadowOpacity = 0.2
+      layer.shadowRadius = 2
   }
 }

@@ -11,6 +11,8 @@ import Reusable
 final class RelatedMoviesViewCell: UITableViewCell, NibLoadable, Reusable {
 
     @IBOutlet weak var collectionView: UICollectionView!
+    
+    private var relatedMovies: [MovieModel] = []
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -29,6 +31,13 @@ final class RelatedMoviesViewCell: UITableViewCell, NibLoadable, Reusable {
         collectionView.delegate = self
         collectionView.register(cellType: MoviesCollectionViewCell.self)
     }
+    
+    func update(with relatedMovies: [MovieModel]) {
+        self.relatedMovies = relatedMovies
+        DispatchQueue.main.async {
+            self.collectionView.reloadData()
+        }
+    }
 }
 
 extension RelatedMoviesViewCell: UICollectionViewDataSource {
@@ -36,7 +45,7 @@ extension RelatedMoviesViewCell: UICollectionViewDataSource {
         _ collectionView: UICollectionView,
         numberOfItemsInSection section: Int
     ) -> Int {
-        return 5
+        return relatedMovies.count
     }
 
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -48,6 +57,7 @@ extension RelatedMoviesViewCell: UICollectionViewDataSource {
         cellForItemAt indexPath: IndexPath
     ) -> UICollectionViewCell {
         let cell: MoviesCollectionViewCell = collectionView.dequeueReusableCell(for: indexPath)
+        cell.update(with: relatedMovies[indexPath.row])
         return cell
     }
 }

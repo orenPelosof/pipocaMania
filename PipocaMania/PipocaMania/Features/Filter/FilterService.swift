@@ -9,9 +9,9 @@ import Foundation
 
 class FilterService {
     
-    func request(completion: @escaping ([Movie]) -> Void) {
+    func request(genreNumber: Int,completion: @escaping ([Movie]) -> Void) {
         
-        guard let url = URL(string: "https://api.themoviedb.org/3/movie/popular?api_key=fac7bcf7b467651b16fb9d8b092c85ea&language=en-US&page=1") else { return }
+        guard let url = URL(string: "https://api.themoviedb.org/3/discover/movie?api_key=fac7bcf7b467651b16fb9d8b092c85ea&with_genres=\(genreNumber)") else { return }
                 
                 let session = URLSession.shared
                 let task = session.dataTask(with: url, completionHandler: { data, response, error in

@@ -6,6 +6,7 @@ final class MovieDetailsView: UIView, NibLoadable {
     @IBOutlet private weak var tableView: UITableView!
     
     private var movie: MovieModel?
+    private var relatedMovies: [MovieModel] = []
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -23,6 +24,11 @@ final class MovieDetailsView: UIView, NibLoadable {
     
     func update(with movie: MovieModel?) {
         self.movie = movie
+        tableView.reloadData()
+    }
+    
+    func update(with relatedMovies: [MovieModel]) {
+        self.relatedMovies = relatedMovies
         tableView.reloadData()
     }
     
@@ -45,6 +51,7 @@ final class MovieDetailsView: UIView, NibLoadable {
             return cell
         default:
             let cell: RelatedMoviesViewCell = tableView.dequeueReusableCell(for: indexPath)
+            cell.update(with: relatedMovies)
             return cell
         }
     }

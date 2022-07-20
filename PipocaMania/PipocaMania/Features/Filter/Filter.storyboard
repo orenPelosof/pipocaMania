@@ -145,6 +145,7 @@
                     <connections>
                         <outlet property="filmesSeriesSegmentedControl" destination="KFT-oV-FlZ" id="dqv-Mf-iSg"/>
                         <outlet property="filterSearchBar" destination="XAc-nX-IEJ" id="0mg-gw-XcZ"/>
+                        <outlet property="generoButton" destination="yqy-nM-fJA" id="J7k-aT-DLi"/>
                         <outlet property="postersCollectionView" destination="XOa-VA-8iN" id="G1R-xi-pew"/>
                         <segue destination="UDR-TC-D9C" kind="show" identifier="detailView" id="Gsh-pB-5zO"/>
                     </connections>
