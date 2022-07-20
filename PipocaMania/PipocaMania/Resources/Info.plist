@@ -19,6 +19,12 @@
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>fb557442786033019</string>
+			</array>
+		</dict>
+		<dict>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>CFBundleURLSchemes</key>
@@ -29,6 +35,12 @@
 	</array>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+	<key>FacebookAppID</key>
+	<string>557442786033019</string>
+	<key>FacebookClientToken</key>
+	<string>2f1c8500a6d104fada6eac39bae3dca1</string>
+	<key>FacebookDisplayName</key>
+	<string>PipocaMania</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>UIApplicationSceneManifest</key>
@@ -48,21 +60,16 @@
 					<string>Login</string>
 				</dict>
 			</array>
-            
 		</dict>
-    </dict>
-    
-    
+	</dict>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
-    
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
-        
 		<string>armv7</string>
 	</array>
 	<key>UIStatusBarStyle</key>
@@ -82,24 +89,5 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
-    
-    
-    
-    <key>CFBundleURLTypes</key>
-    <array>
-      <dict>
-      <key>CFBundleURLSchemes</key>
-      <array>
-        <string>fb557442786033019</string>
-      </array>
-      </dict>
-    </array>
-    <key>FacebookAppID</key>
-    <string>557442786033019</string>
-    <key>FacebookClientToken</key>
-    <string>2f1c8500a6d104fada6eac39bae3dca1</string>
-    <key>FacebookDisplayName</key>
-    <string>PipocaMania</string>
-    
-    </dict>
+</dict>
 </plist>
