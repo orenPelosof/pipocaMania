@@ -7,6 +7,7 @@
 
 import UIKit
 import Reusable
+import Kingfisher
 
 class FavoriteTableViewCell: UITableViewCell, NibLoadable, Reusable {
     @IBOutlet weak var favoriteImageView: UIImageView!
@@ -26,11 +27,11 @@ class FavoriteTableViewCell: UITableViewCell, NibLoadable, Reusable {
         // Configure the view for the selected state
     }
     
-    func update(with movie: Filme?, posterImage: UIImage) {
+    func update(with movie: Filme?) {
         guard let movie = movie else {return}
-        favoriteImageView.image = posterImage
+        KF.url(URL(string: "https://image.tmdb.org/t/p/w500\(movie.imagem)")).set(to: favoriteImageView)
         filmeTitleLabel.text = movie.titulo
-        descriptionLabel.text = movie.titulo
+        descriptionLabel.text = movie.descricao
     }
     
 }

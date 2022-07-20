@@ -10,33 +10,61 @@ import UIKit
 import CoreData
 
 class DataBaseHelper {
+
     
-    static let shareInstance = DataBaseHelper()
+    private let controller: NSFetchedResultsController<Filme>
     
-    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-    func saveFilm(data: Data, title: String) {
-        let filme = Filme(context: context)
-        filme.imagem = data
-        filme.titulo = title
-        let listaDeFilmes = DataBaseHelper.shareInstance.fetchImage()
-        if !listaDeFilmes.contains(where: {$0.titulo == filme.titulo}) {
+    init() {
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {fatalError()}
+        let request = Filme.fetchRequest()
+        let managedContext = appDelegate.persistentContainer.viewContext
+        controller = NSFetchedResultsController(fetchRequest: request, managedObjectContext: managedContext, sectionNameKeyPath: nil, cacheName: nil)
+    }
+    
+    func requestFavorites(completion: @escaping ((Result<[Filme], Error>) -> Void)) {
+        
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { fatalError()}
+        let managedContext = appDelegate.persistentContainer.viewContext
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Filme")
+
+        controller.managedObjectContext.performAndWait {
+   
             do {
-                try context.save()
-                print("Image is saved")
+                try self.controller.performFetch()
+                let savedMovies = try managedContext.fetch(fetchRequest) as? [Filme]
+                completion(.success(savedMovies ?? []))
             } catch {
-                print(error.localizedDescription)
+                completion(.failure(error))
             }
         }
     }
     
-    func fetchImage() -> [Filme] {
-        var fetchingImage = [Filme]()
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Filme")
-        do {
-            fetchingImage = try context.fetch(fetchRequest) as! [Filme]
-        } catch {
-            print("Error while fetching the image")
+    func save(movie: MovieToCoreData) {
+        controller.managedObjectContext.performAndWait {
+            
+            guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {return}
+            let managedContext = appDelegate.persistentContainer.viewContext
+            let entity = NSEntityDescription.entity(forEntityName: "Filme",in: managedContext)!
+            let filme = Filme(entity: entity, insertInto: managedContext)
+                 
+            filme.titulo = movie.titulo
+            filme.imagem = movie.imagem
+            filme.descricao = movie.descricao
+            
+            self.controller.managedObjectContext.insert(filme)
+            try? self.controller.managedObjectContext.save()
         }
-        return fetchingImage
     }
+    
+    func delete(movie: Filme) {
+        
+        controller.managedObjectContext.performAndWait {
+            self.controller.managedObjectContext.delete(movie)
+            try? self.controller.managedObjectContext.save()
+        }
+    }
+    
 }
+
+
+

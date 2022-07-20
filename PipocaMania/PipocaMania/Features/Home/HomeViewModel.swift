@@ -20,31 +20,21 @@ class HomeViewModel {
     let servico = ServicoHome()
     
     var listaDeFilmes: [Movie] = []
-    var listaDeImagens: [UIImage] = []
+    var listaDePesquisa: [Movie] = []
+    var favorites : [Filme] = []
+    var coreData = DataBaseHelper()
+    
+    var isSearching = false
+    
+    var paginaAtual = 1
     
     func consultaFilmes() {
-        listaDeImagens.removeAll()
-        servico.request {resultado in
-            self.listaDeFilmes = resultado
-            
-            for i in self.listaDeFilmes {
-                
-                self.retornaImagem(path: i.posterPath)
-                
-            }
-            
+        servico.request(numeroDaPagina: paginaAtual) {resultado in
+            self.listaDeFilmes.append(contentsOf: resultado)
+            self.listaDePesquisa.append(contentsOf: resultado)
             self.delegate?.atualizaFilmes()
             
         }
-    }
-    
-    func retornaImagem(path: String) {
-        guard let urlImage = URL(string: "https://image.tmdb.org/t/p/w400\(path)") else { return }
-        guard let data = try? Data(contentsOf: urlImage) else { return }
-        let imagem = UIImage(data: data)!
-        
-            self.listaDeImagens.append(imagem)
-        
     }
     
     func retornaQuantidadeFilmes() -> Int {
@@ -59,13 +49,50 @@ class HomeViewModel {
             return
         }
         
-        listaDeImagens.removeAll()
-        for filme in filtered {
-            retornaImagem(path: filme.posterPath)
-        }
-        
-        listaDeFilmes = filtered
+        listaDePesquisa = filtered
         delegate?.finishedFiltering()
+    }
+    
+    func buttonHeartTappedAt(movieIndex: Int){
+       let toFavorite = listaDeFilmes[movieIndex]
+        if checkFavorite(movieName: toFavorite.originalTitle){
+          let favMovie = favorites.filter { item in item.titulo.contains(toFavorite.originalTitle) }
+            deleteFavorite(movie: favMovie[0])
+            fetchCoreData()
+    
+        } else {
+            saveFavorite(movie: toFavorite)
+            fetchCoreData()
+        }
+    }
+    
+
+    func checkFavorite(movieName: String) -> Bool{return favorites.contains(where: {$0.titulo == movieName})}
+    
+    func deleteFavorite(movie: Filme) { coreData.delete(movie: movie) }
+    
+    func saveFavorite(movie: Movie){
+        
+        let convertDate = movie.releaseDate
+        let year = String(convertDate.prefix(4))
+        let favoriteMovie: MovieToCoreData = MovieToCoreData(
+            
+            titulo: movie.originalTitle,
+            imagem: movie.posterPath,
+            descricao: movie.overview)
+        
+        coreData.save(movie: favoriteMovie)
+    }
+    
+    func fetchCoreData(){
+        coreData.requestFavorites { (favoritesMoviesCoreData:Result<[Filme], Error>) in
+            switch favoritesMoviesCoreData {
+            case.success(let favoritesMoviesCoreData):
+                self.favorites = favoritesMoviesCoreData
+            case.failure(let error):
+                print(error)
+            }
+        }
     }
 
 }

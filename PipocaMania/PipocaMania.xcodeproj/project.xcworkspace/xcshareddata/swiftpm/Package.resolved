@@ -1,6 +1,16 @@
 {
+<<<<<<< HEAD
   "object": {
     "pins": [
+      {
+        "package": "Kingfisher",
+        "repositoryURL": "https://github.com/onevcat/Kingfisher.git",
+        "state": {
+          "branch": null,
+          "revision": "2235a22ca249199cb736237f4bb9cc12b6ed416a",
+          "version": "7.3.0"
+        }
+      },
       {
         "package": "Reusable",
         "repositoryURL": "https://github.com/AliSoftware/Reusable.git",
@@ -9,8 +19,18 @@
           "revision": "86cd17aa27e80d20bfe2ea57dd08958cf64664f4",
           "version": "4.1.1"
         }
+=======
+  "pins" : [
+    {
+      "identity" : "reusable",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/AliSoftware/Reusable.git",
+      "state" : {
+        "revision" : "86cd17aa27e80d20bfe2ea57dd08958cf64664f4",
+        "version" : "4.1.1"
+>>>>>>> detail/collectionIntegration
       }
-    ]
-  },
-  "version": 1
+    }
+  ],
+  "version" : 2
 }

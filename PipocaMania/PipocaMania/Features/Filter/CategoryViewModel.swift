@@ -24,31 +24,18 @@ class CategoryViewModel {
     var listaDeImagens: [UIImage] = []
     var listaDeCategorias: [Genres] = []
     
-    func consultaFilmes() {
+    var lastGenreSelected: Int?
+    
+    func consultaFilmes(genreSearched: Int) {
         listaDeImagens.removeAll()
-        servico.request {resultado in
+        servico.request(genreNumber: genreSearched) {resultado in
             self.listaDeFilmes = resultado
-            
-            for i in self.listaDeFilmes {
-                
-                self.retornaImagem(path: i.posterPath)
-                
-            }
             
             self.delegate?.atualizaFilmes()
             
         }
     }
-    
-    func retornaImagem(path: String) {
-        guard let urlImage = URL(string: "https://image.tmdb.org/t/p/w300\(path)") else { return }
-        guard let data = try? Data(contentsOf: urlImage) else { return }
-        let imagem = UIImage(data: data)!
-        
-            self.listaDeImagens.append(imagem)
-        
-    }
-    
+
     func retornaQuantidadeFilmes() -> Int {
         return listaDeFilmes.count
     }
@@ -62,9 +49,6 @@ class CategoryViewModel {
         }
         
         listaDeImagens.removeAll()
-        for filme in filtered {
-            retornaImagem(path: filme.posterPath)
-        }
         
         listaDeFilmes = filtered
         delegate?.finishedFiltering()

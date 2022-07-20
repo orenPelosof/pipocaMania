@@ -9,9 +9,9 @@ import Foundation
 
 class ServicoHome {
     
-    func request(completion: @escaping ([Movie]) -> Void) {
+    func request(numeroDaPagina: Int, completion: @escaping ([Movie]) -> Void) {
         
-        guard let url = URL(string: "https://api.themoviedb.org/3/movie/popular?api_key=014aa09f21b98110eba6145cab75df78&language=en-US&page=1") else { return }
+        guard let url = URL(string: "https://api.themoviedb.org/3/movie/popular?api_key=fac7bcf7b467651b16fb9d8b092c85ea&language=en-US&page=\(numeroDaPagina)") else { return }
                 
                 let session = URLSession.shared
                 let task = session.dataTask(with: url, completionHandler: { data, response, error in

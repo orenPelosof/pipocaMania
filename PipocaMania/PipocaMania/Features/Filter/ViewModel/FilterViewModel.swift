@@ -8,12 +8,18 @@
 import UIKit
 import Reusable
 
+protocol FilterViewControllerDelegate: AnyObject {
+    func updateGenreToSearch(newGenre: Genres)
+}
 
 class FilterViewModel: UIViewController {
 
     @IBOutlet var categoriasPickerView: UIPickerView!
     
     let viewModel: CategoryViewModel = CategoryViewModel()
+    
+    weak var delegate: FilterViewControllerDelegate?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         categoriasPickerView.setValue(UIColor.white, forKeyPath: "textColor")
@@ -24,7 +30,6 @@ class FilterViewModel: UIViewController {
         
         viewModel.delegate = self
         viewModel.consultaCategoria()
-        // Do any additional setup after loading the view.
     }
     
 
@@ -53,8 +58,8 @@ extension FilterViewModel: CategoryViewModelDelegate {
 extension FilterViewModel: UIPickerViewDelegate {
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        let genero = viewModel.listaDeCategorias[row].name
-        print(genero)
+        let genero = viewModel.listaDeCategorias[row]
+        delegate?.updateGenreToSearch(newGenre: genero)
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {

@@ -26,14 +26,18 @@ final class MovieDetailsViewController: UIViewController {
         super.viewDidLoad()
 //        if let idMovie = idMovie {
         viewModel.getMovieDetails(id: idMovie ?? 0)
+        viewModel.getSimilarMovies(id: idMovie ?? 0)
 //        }
     }
 }
 
 extension MovieDetailsViewController: MovieDetailsViewModelDelegate {
     func showDetails(of movie: MovieModel?) {
-        print(movie)
         movieDetailsView.update(with: movie)
+    }
+    
+    func showSimilar(movies: [MovieModel]) {
+        movieDetailsView.update(with: movies)
     }
     
     func showEmptyFieldError() {
