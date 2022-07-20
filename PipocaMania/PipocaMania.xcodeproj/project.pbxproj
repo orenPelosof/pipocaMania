@@ -14,6 +14,8 @@
 		1239CA832860F7230097DB0F /* ServicoHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1239CA822860F7230097DB0F /* ServicoHome.swift */; };
 		1239CA852860F7540097DB0F /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1239CA842860F7540097DB0F /* HomeViewModel.swift */; };
 		124D24372863B88400275183 /* CadastroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124D24362863B88400275183 /* CadastroViewController.swift */; };
+		1283DE7D287CCD3B00859711 /* Filme+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1283DE7C287CCD3B00859711 /* Filme+CoreDataProperties.swift */; };
+		1283DE7F287CCD8C00859711 /* Filme+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1283DE7E287CCD8C00859711 /* Filme+CoreDataClass.swift */; };
 		128D710C2879CC5400896D92 /* FavoriteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 128D710A2879CC5400896D92 /* FavoriteTableViewCell.xib */; };
 		128D710D2879CC5400896D92 /* FavoriteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128D710B2879CC5400896D92 /* FavoriteTableViewCell.swift */; };
 		129B3E1828511C9B008799C4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129B3E1728511C9B008799C4 /* HomeViewController.swift */; };
@@ -24,6 +26,7 @@
 		12D664062873851500FCF6B1 /* Favorits.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12D664052873851500FCF6B1 /* Favorits.storyboard */; };
 		12D664082873852E00FCF6B1 /* FavoritsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D664072873852E00FCF6B1 /* FavoritsViewController.swift */; };
 		12D6640A28738C2D00FCF6B1 /* DataBaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D6640928738C2D00FCF6B1 /* DataBaseHelper.swift */; };
+		12FB95262880C278000CEECA /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 12FB95252880C278000CEECA /* Kingfisher */; };
 		5A1444972875EEC300CC40A2 /* MovieDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1444732875EEC300CC40A2 /* MovieDetailsViewModel.swift */; };
 		5A1444982875EEC300CC40A2 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1444762875EEC300CC40A2 /* Environment.swift */; };
 		5A1444992875EEC300CC40A2 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1444772875EEC300CC40A2 /* Endpoint.swift */; };
@@ -87,6 +90,8 @@
 		1239CA822860F7230097DB0F /* ServicoHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicoHome.swift; sourceTree = "<group>"; };
 		1239CA842860F7540097DB0F /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		124D24362863B88400275183 /* CadastroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadastroViewController.swift; sourceTree = "<group>"; };
+		1283DE7C287CCD3B00859711 /* Filme+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Filme+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		1283DE7E287CCD8C00859711 /* Filme+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Filme+CoreDataClass.swift"; sourceTree = "<group>"; };
 		128D710A2879CC5400896D92 /* FavoriteTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FavoriteTableViewCell.xib; sourceTree = "<group>"; };
 		128D710B2879CC5400896D92 /* FavoriteTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteTableViewCell.swift; sourceTree = "<group>"; };
 		129B3E1728511C9B008799C4 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -161,6 +166,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				12FB95262880C278000CEECA /* Kingfisher in Frameworks */,
 				5A73B0F6284F845D00E63F7D /* Reusable in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -205,6 +211,8 @@
 				12D664052873851500FCF6B1 /* Favorits.storyboard */,
 				12D664072873852E00FCF6B1 /* FavoritsViewController.swift */,
 				12D6640928738C2D00FCF6B1 /* DataBaseHelper.swift */,
+				1283DE7E287CCD8C00859711 /* Filme+CoreDataClass.swift */,
+				1283DE7C287CCD3B00859711 /* Filme+CoreDataProperties.swift */,
 			);
 			path = Favorits;
 			sourceTree = "<group>";
@@ -514,6 +522,7 @@
 			name = PipocaMania;
 			packageProductDependencies = (
 				5A73B0F5284F845D00E63F7D /* Reusable */,
+				12FB95252880C278000CEECA /* Kingfisher */,
 			);
 			productName = PipocaMania;
 			productReference = 5A8ACEBE284026700018E385 /* PipocaMania.app */;
@@ -530,6 +539,7 @@
 				TargetAttributes = {
 					5A8ACEBD284026700018E385 = {
 						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1320;
 					};
 				};
 			};
@@ -544,6 +554,7 @@
 			mainGroup = 5A8ACEB5284026700018E385;
 			packageReferences = (
 				5A73B0F4284F845D00E63F7D /* XCRemoteSwiftPackageReference "Reusable" */,
+				12FB95242880C278000CEECA /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 5A8ACEBF284026700018E385 /* Products */;
 			projectDirPath = "";
@@ -604,6 +615,7 @@
 				5A14449A2875EEC300CC40A2 /* Data+PrettyPrintedJSONString+Extension.swift in Sources */,
 				5A1444A62875EEC300CC40A2 /* MovieTitleViewCell.swift in Sources */,
 				122379AA287506F3006DBF53 /* CategoryModel.swift in Sources */,
+				1283DE7F287CCD8C00859711 /* Filme+CoreDataClass.swift in Sources */,
 				5A1444B02875EEC300CC40A2 /* ServiceDetail.swift in Sources */,
 				12D664082873852E00FCF6B1 /* FavoritsViewController.swift in Sources */,
 				5A73B107284F8D7600E63F7D /* ProfileViewController.swift in Sources */,
@@ -634,6 +646,7 @@
 				122379A82874FADB006DBF53 /* CategoryViewModel.swift in Sources */,
 				5A73B0FE284F865E00E63F7D /* UIColor+Extension.swift in Sources */,
 				1239CA832860F7230097DB0F /* ServicoHome.swift in Sources */,
+				1283DE7D287CCD3B00859711 /* Filme+CoreDataProperties.swift in Sources */,
 				FA82EE8B28512B1D00167730 /* FilterViewModel.swift in Sources */,
 				5A1444A42875EEC300CC40A2 /* MovieSynopsisViewCell.swift in Sources */,
 				5A1444972875EEC300CC40A2 /* MovieDetailsViewModel.swift in Sources */,
@@ -776,6 +789,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BT95VNV3L2;
 				INFOPLIST_FILE = PipocaMania/Resources/Info.plist;
@@ -785,6 +799,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Tiago-Deanna.PipocaMania";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -795,6 +811,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BT95VNV3L2;
 				INFOPLIST_FILE = PipocaMania/Resources/Info.plist;
@@ -804,6 +821,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Tiago-Deanna.PipocaMania";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -833,6 +851,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		12FB95242880C278000CEECA /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
 		5A73B0F4284F845D00E63F7D /* XCRemoteSwiftPackageReference "Reusable" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/AliSoftware/Reusable.git";
@@ -844,6 +870,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		12FB95252880C278000CEECA /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 12FB95242880C278000CEECA /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
 		5A73B0F5284F845D00E63F7D /* Reusable */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 5A73B0F4284F845D00E63F7D /* XCRemoteSwiftPackageReference "Reusable" */;

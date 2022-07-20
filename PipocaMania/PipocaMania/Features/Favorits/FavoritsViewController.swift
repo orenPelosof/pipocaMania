@@ -11,8 +11,8 @@ import Reusable
 class FavoritsViewController: UIViewController {
     
     @IBOutlet var tableView: UITableView!
-    
-    var listaDeFilmesSalvos = DataBaseHelper.shareInstance.fetchImage()
+    private var coreData = DataBaseHelper()
+    var filmesFavoritos: [Filme] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,8 +24,20 @@ class FavoritsViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        listaDeFilmesSalvos = DataBaseHelper.shareInstance.fetchImage()
+        fetchFavorites()
         tableView.reloadData()
+    }
+    
+    func fetchFavorites(){
+        coreData.requestFavorites { (favorites: Result<[Filme], Error>) in
+            switch favorites {
+            case .success(let favorites):
+                self.filmesFavoritos = favorites
+            case .failure(let failure):
+                print(failure)
+                
+            }
+        }
     }
     
     
@@ -33,29 +45,28 @@ class FavoritsViewController: UIViewController {
 
 extension FavoritsViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if listaDeFilmesSalvos.isEmpty {
+        if filmesFavoritos.isEmpty {
             return 1
         }
-        return listaDeFilmesSalvos.count
+        return filmesFavoritos.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if listaDeFilmesSalvos.isEmpty {
+        if filmesFavoritos.isEmpty {
             let errorCell = UITableViewCell()
             errorCell.textLabel?.text = "não há filmes"
             return errorCell
         }
         let cell: FavoriteTableViewCell = tableView.dequeueReusableCell(for: indexPath)
-        cell.favoriteImageView?.image = UIImage(data: listaDeFilmesSalvos[indexPath.row].imagem!)
-        cell.filmeTitleLabel?.text = listaDeFilmesSalvos[indexPath.row].titulo
         
-        cell.descriptionLabel.text = listaDeFilmesSalvos[indexPath.row].titulo
+        cell.update(with: filmesFavoritos[indexPath.row])
+        
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
            // Make the first row larger to accommodate a custom cell.
-        if listaDeFilmesSalvos.isEmpty {
+        if filmesFavoritos.isEmpty {
               return 80
            }
 
