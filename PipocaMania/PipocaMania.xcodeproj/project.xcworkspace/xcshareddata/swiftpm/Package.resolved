@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "object": {
     "pins": [
       {
@@ -18,8 +19,18 @@
           "revision": "86cd17aa27e80d20bfe2ea57dd08958cf64664f4",
           "version": "4.1.1"
         }
+=======
+  "pins" : [
+    {
+      "identity" : "reusable",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/AliSoftware/Reusable.git",
+      "state" : {
+        "revision" : "86cd17aa27e80d20bfe2ea57dd08958cf64664f4",
+        "version" : "4.1.1"
+>>>>>>> detail/collectionIntegration
       }
-    ]
-  },
-  "version": 1
+    }
+  ],
+  "version" : 2
 }
