@@ -15,23 +15,25 @@ import FacebookLogin
 class LoginViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var signInButton: GIDSignInButton!
-    
-    
-    
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var senhaTextField: UITextField!
     
+    @IBOutlet weak var stackView: UIStackView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         let loginButton = FBLoginButton()
-                loginButton.center = view.center
-            //    view.addSubview(loginButton)
+        stackView.addArrangedSubview(loginButton)
+        loginButton.constraints.first(where: { (constraint) -> Bool in
+            return constraint.firstAttribute == .height
+        })?.constant = 40.0
         
-    self.emailTextField.delegate = self
-    self.senhaTextField.delegate = self
-        }
+        signInButton.style = .iconOnly
+        
+        self.emailTextField.delegate = self
+        self.senhaTextField.delegate = self
+    }
     
     
     @IBAction func loginGoogleButtonAction(_ sender: Any) {
@@ -40,45 +42,45 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     private func loginGoogle() {
         guard let clientID = FirebaseApp.app()?.options.clientID else { return }
-
+        
         // Create Google Sign In configuration object.
         let config = GIDConfiguration(clientID: clientID)
-
+        
         // Start the sign in flow!
         GIDSignIn.sharedInstance.signIn(with: config, presenting: self) { [unowned self] user, error in
-
-          if let error = error {
+            
+            if let error = error {
+                // ...
+                return
+            }
+            
+            guard
+                let authentication = user?.authentication,
+                let idToken = authentication.idToken
+            else {
+                return
+            }
+            
+            let credential = GoogleAuthProvider.credential(withIDToken: idToken,
+                                                           accessToken: authentication.accessToken)
+            
             // ...
-            return
-          }
-
-          guard
-            let authentication = user?.authentication,
-            let idToken = authentication.idToken
-          else {
-            return
-          }
-
-          let credential = GoogleAuthProvider.credential(withIDToken: idToken,
-                                                         accessToken: authentication.accessToken)
-
-          // ...
             
             Auth.auth().signIn(with: credential) { authResult, error in
                 if let error = error {
-                  }
-                  // ...
-                  return
                 }
-                // User is signed in
                 // ...
+                return
             }
-            
+            // User is signed in
+            // ...
         }
+        
+    }
     
-
     
- //Botao entrar para navegar para a proxima pagina
+    
+    //Botao entrar para navegar para a proxima pagina
     
     @IBAction func enterButtonAction(_ sender: Any) {
         let email: String? = self.emailTextField.text
@@ -104,7 +106,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         let email: String! = self.emailTextField.text
         let senha: String! = self.senhaTextField.text
         
-//print concatenando os dados do user e printando
+        //print concatenando os dados do user e printando
         print("dados de login do user: email:\(email)passworld:\(senha)")
     }
 }
