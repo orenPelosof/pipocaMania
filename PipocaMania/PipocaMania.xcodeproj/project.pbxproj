@@ -3,10 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 55;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D0737FB288B5C19000F3799 /* Pods_PipocaMania.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6402722384BDB244AC2B3D07 /* Pods_PipocaMania.framework */; };
+		0D0737FC288B5C19000F3799 /* Pods_PipocaMania.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6402722384BDB244AC2B3D07 /* Pods_PipocaMania.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0D073800288B61FF000F3799 /* Reusable in Frameworks */ = {isa = PBXBuildFile; productRef = 0D0737FF288B61FF000F3799 /* Reusable */; };
+		0D073803288B6213000F3799 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 0D073802288B6213000F3799 /* Kingfisher */; };
 		0D606D2B28833820000C584E /* SimilarMoviesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D606D2A28833820000C584E /* SimilarMoviesModel.swift */; };
 		122379A62874F627006DBF53 /* FilterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122379A52874F627006DBF53 /* FilterService.swift */; };
 		122379A82874FADB006DBF53 /* CategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122379A72874FADB006DBF53 /* CategoryViewModel.swift */; };
@@ -27,7 +31,6 @@
 		12D664062873851500FCF6B1 /* Favorits.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12D664052873851500FCF6B1 /* Favorits.storyboard */; };
 		12D664082873852E00FCF6B1 /* FavoritsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D664072873852E00FCF6B1 /* FavoritsViewController.swift */; };
 		12D6640A28738C2D00FCF6B1 /* DataBaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D6640928738C2D00FCF6B1 /* DataBaseHelper.swift */; };
-		12FB95262880C278000CEECA /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 12FB95252880C278000CEECA /* Kingfisher */; };
 		5A1444972875EEC300CC40A2 /* MovieDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1444732875EEC300CC40A2 /* MovieDetailsViewModel.swift */; };
 		5A1444982875EEC300CC40A2 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1444762875EEC300CC40A2 /* Environment.swift */; };
 		5A1444992875EEC300CC40A2 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1444772875EEC300CC40A2 /* Endpoint.swift */; };
@@ -59,7 +62,6 @@
 		5A7283BE2844C81300242621 /* ProfileViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A7283BD2844C81300242621 /* ProfileViewCell.xib */; };
 		5A7283D92844EF4700242621 /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7283D82844EF4700242621 /* ProfileHeaderView.swift */; };
 		5A7283E0284502A700242621 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A7283DF284502A700242621 /* Assets.xcassets */; };
-		5A73B0F6284F845D00E63F7D /* Reusable in Frameworks */ = {isa = PBXBuildFile; productRef = 5A73B0F5284F845D00E63F7D /* Reusable */; };
 		5A73B0FE284F865E00E63F7D /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A73B0FD284F865E00E63F7D /* UIColor+Extension.swift */; };
 		5A73B103284F86B700E63F7D /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A73B102284F86B700E63F7D /* Colors.xcassets */; };
 		5A73B107284F8D7600E63F7D /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A53E9762842021D00552F30 /* ProfileViewController.swift */; };
@@ -77,7 +79,6 @@
 		5AEAA9E5284EDD23000A342B /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEAA9E4284EDD23000A342B /* ProfileModel.swift */; };
 		5AEAA9EE284EDF5C000A342B /* ProfileFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEAA9ED284EDF5C000A342B /* ProfileFooterView.swift */; };
 		5AEAA9F2284EDF77000A342B /* ProfileFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AEAA9F1284EDF77000A342B /* ProfileFooterView.xib */; };
-		6B01F678708419D11B872E70 /* Pods_PipocaMania.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6402722384BDB244AC2B3D07 /* Pods_PipocaMania.framework */; };
 		8B700EFA287F0E84004686DB /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B700EF9287F0E84004686DB /* User.swift */; };
 		8B700EFC287F0F17004686DB /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B700EFB287F0F17004686DB /* Authentication.swift */; };
 		8B700F0128872A83004686DB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8B700F0028872A82004686DB /* GoogleService-Info.plist */; };
@@ -86,6 +87,20 @@
 		FA82EE8B28512B1D00167730 /* FilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA82EE8A28512B1D00167730 /* FilterViewModel.swift */; };
 		FA8CAEF62845014700FB9BEA /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8CAEF52845014700FB9BEA /* FilterViewController.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		0D0737FD288B5C19000F3799 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				0D0737FC288B5C19000F3799 /* Pods_PipocaMania.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0D606D2A28833820000C584E /* SimilarMoviesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimilarMoviesModel.swift; sourceTree = "<group>"; };
@@ -176,9 +191,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				12FB95262880C278000CEECA /* Kingfisher in Frameworks */,
-				5A73B0F6284F845D00E63F7D /* Reusable in Frameworks */,
-				6B01F678708419D11B872E70 /* Pods_PipocaMania.framework in Frameworks */,
+				0D073803288B6213000F3799 /* Kingfisher in Frameworks */,
+				0D0737FB288B5C19000F3799 /* Pods_PipocaMania.framework in Frameworks */,
+				0D073800288B61FF000F3799 /* Reusable in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -572,6 +587,7 @@
 				5A8ACEBB284026700018E385 /* Frameworks */,
 				5A8ACEBC284026700018E385 /* Resources */,
 				6CC5D483C84B5F31B1EDF523 /* [CP] Embed Pods Frameworks */,
+				0D0737FD288B5C19000F3799 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -579,8 +595,8 @@
 			);
 			name = PipocaMania;
 			packageProductDependencies = (
-				5A73B0F5284F845D00E63F7D /* Reusable */,
-				12FB95252880C278000CEECA /* Kingfisher */,
+				0D0737FF288B61FF000F3799 /* Reusable */,
+				0D073802288B6213000F3799 /* Kingfisher */,
 			);
 			productName = PipocaMania;
 			productReference = 5A8ACEBE284026700018E385 /* PipocaMania.app */;
@@ -602,7 +618,7 @@
 				};
 			};
 			buildConfigurationList = 5A8ACEB9284026700018E385 /* Build configuration list for PBXProject "PipocaMania" */;
-			compatibilityVersion = "Xcode 13.0";
+			compatibilityVersion = "Xcode 12.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -611,8 +627,8 @@
 			);
 			mainGroup = 5A8ACEB5284026700018E385;
 			packageReferences = (
-				5A73B0F4284F845D00E63F7D /* XCRemoteSwiftPackageReference "Reusable" */,
-				12FB95242880C278000CEECA /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				0D0737FE288B61FF000F3799 /* XCRemoteSwiftPackageReference "Reusable" */,
+				0D073801288B6213000F3799 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 5A8ACEBF284026700018E385 /* Products */;
 			projectDirPath = "";
@@ -920,7 +936,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9M8MCM84Z4;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = PipocaMania/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -959,34 +975,34 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		12FB95242880C278000CEECA /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 7.0.0;
-			};
-		};
-		5A73B0F4284F845D00E63F7D /* XCRemoteSwiftPackageReference "Reusable" */ = {
+		0D0737FE288B61FF000F3799 /* XCRemoteSwiftPackageReference "Reusable" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/AliSoftware/Reusable.git";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 4.1.0;
+				branch = main;
+				kind = branch;
+			};
+		};
+		0D073801288B6213000F3799 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				branch = master;
+				kind = branch;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		12FB95252880C278000CEECA /* Kingfisher */ = {
+		0D0737FF288B61FF000F3799 /* Reusable */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 12FB95242880C278000CEECA /* XCRemoteSwiftPackageReference "Kingfisher" */;
-			productName = Kingfisher;
-		};
-		5A73B0F5284F845D00E63F7D /* Reusable */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 5A73B0F4284F845D00E63F7D /* XCRemoteSwiftPackageReference "Reusable" */;
+			package = 0D0737FE288B61FF000F3799 /* XCRemoteSwiftPackageReference "Reusable" */;
 			productName = Reusable;
+		};
+		0D073802288B6213000F3799 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0D073801288B6213000F3799 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
 

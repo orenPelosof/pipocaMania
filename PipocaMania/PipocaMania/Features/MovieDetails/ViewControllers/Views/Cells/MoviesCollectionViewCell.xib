@@ -18,7 +18,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="198" height="200"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FilmesRelacionados" translatesAutoresizingMaskIntoConstraints="NO" id="A8l-iI-ddX">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imageLoad" translatesAutoresizingMaskIntoConstraints="NO" id="A8l-iI-ddX">
                         <rect key="frame" x="12" y="12" width="130" height="100"/>
                         <color key="backgroundColor" name="main"/>
                         <constraints>
@@ -60,7 +60,7 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="FilmesRelacionados" width="142" height="106"/>
+        <image name="imageLoad" width="584" height="387"/>
         <namedColor name="main">
             <color red="0.082352941176470587" green="0.078431372549019607" blue="0.12156862745098039" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
