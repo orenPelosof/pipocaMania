@@ -13,27 +13,34 @@ final class MovieDetailsViewController: UIViewController {
     
     override func loadView() {
         super.loadView()
+        movieDetailsView.viewDelegate = self
         view = movieDetailsView
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-     
-        
+        viewModel.fetchCoreData()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        if let idMovie = idMovie {
         viewModel.getMovieDetails(id: idMovie ?? 0)
         viewModel.getSimilarMovies(id: idMovie ?? 0)
-//        }
     }
 }
 
 extension MovieDetailsViewController: MovieDetailsViewModelDelegate {
     func showDetails(of movie: MovieModel?) {
-        movieDetailsView.update(with: movie)
+        
+        if viewModel.checkFavorite(movieName: (movie?.originalTitle)!){
+            let image = "star.fill"
+            
+            movieDetailsView.update(with: movie, with: image)
+        } else {
+            let image = "star"
+            
+            movieDetailsView.update(with: movie, with: image)
+        }
     }
     
     func showSimilar(movies: [MovieModel]) {
@@ -47,4 +54,12 @@ extension MovieDetailsViewController: MovieDetailsViewModelDelegate {
     func showError(message: String?) {
         print(message ?? String())
     }
+}
+
+extension MovieDetailsViewController: MovieDetailsViewDelegate {
+    func isStarButtonTouched(film: MovieModel) {
+        viewModel.isStarButtonTouched(movie: film)
+        showDetails(of: film)
+    }
+    
 }

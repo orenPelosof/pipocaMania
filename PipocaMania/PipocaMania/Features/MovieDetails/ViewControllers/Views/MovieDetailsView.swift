@@ -1,12 +1,19 @@
 import UIKit
 import Reusable
 
+protocol MovieDetailsViewDelegate {
+    func isStarButtonTouched(film: MovieModel)
+}
+
 final class MovieDetailsView: UIView, NibLoadable {
     
     @IBOutlet private weak var tableView: UITableView!
     
     private var movie: MovieModel?
     private var relatedMovies: [MovieModel] = []
+    private var imageWatchLater: String = ""
+    
+    var viewDelegate: MovieDetailsViewDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -22,8 +29,9 @@ final class MovieDetailsView: UIView, NibLoadable {
         tableView.register(headerFooterViewType: MovieHeaderView.self)
     }
     
-    func update(with movie: MovieModel?) {
+    func update(with movie: MovieModel?, with image: String) {
         self.movie = movie
+        self.imageWatchLater = image
         tableView.reloadData()
     }
     
@@ -40,6 +48,8 @@ final class MovieDetailsView: UIView, NibLoadable {
         case 0:
             let cell: MovieTitleViewCell = tableView.dequeueReusableCell(for: indexPath)
             cell.update(with: movie)
+            cell.watchLaterButton.setImage(UIImage(systemName: "\(imageWatchLater)"), for: .normal)
+            cell.cellDelegate = self
             return cell
         case 1:
             let cell: MovieInfoViewCell = tableView.dequeueReusableCell(for: indexPath)
@@ -109,4 +119,12 @@ extension MovieDetailsView: UITableViewDelegate {
     ) -> CGFloat {
         260
     }
+}
+
+extension MovieDetailsView: MovieTitleViewCellDelegate {
+    func isStarButtonTouched(film: MovieModel) {
+        viewDelegate?.isStarButtonTouched(film: film)
+    }
+    
+    
 }

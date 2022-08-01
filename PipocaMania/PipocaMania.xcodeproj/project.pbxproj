@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 55;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -27,7 +27,6 @@
 		12D664062873851500FCF6B1 /* Favorits.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12D664052873851500FCF6B1 /* Favorits.storyboard */; };
 		12D664082873852E00FCF6B1 /* FavoritsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D664072873852E00FCF6B1 /* FavoritsViewController.swift */; };
 		12D6640A28738C2D00FCF6B1 /* DataBaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D6640928738C2D00FCF6B1 /* DataBaseHelper.swift */; };
-		12FB95262880C278000CEECA /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 12FB95252880C278000CEECA /* Kingfisher */; };
 		5A1444972875EEC300CC40A2 /* MovieDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1444732875EEC300CC40A2 /* MovieDetailsViewModel.swift */; };
 		5A1444982875EEC300CC40A2 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1444762875EEC300CC40A2 /* Environment.swift */; };
 		5A1444992875EEC300CC40A2 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1444772875EEC300CC40A2 /* Endpoint.swift */; };
@@ -59,7 +58,6 @@
 		5A7283BE2844C81300242621 /* ProfileViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A7283BD2844C81300242621 /* ProfileViewCell.xib */; };
 		5A7283D92844EF4700242621 /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7283D82844EF4700242621 /* ProfileHeaderView.swift */; };
 		5A7283E0284502A700242621 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A7283DF284502A700242621 /* Assets.xcassets */; };
-		5A73B0F6284F845D00E63F7D /* Reusable in Frameworks */ = {isa = PBXBuildFile; productRef = 5A73B0F5284F845D00E63F7D /* Reusable */; };
 		5A73B0FE284F865E00E63F7D /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A73B0FD284F865E00E63F7D /* UIColor+Extension.swift */; };
 		5A73B103284F86B700E63F7D /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A73B102284F86B700E63F7D /* Colors.xcassets */; };
 		5A73B107284F8D7600E63F7D /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A53E9762842021D00552F30 /* ProfileViewController.swift */; };
@@ -176,8 +174,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				12FB95262880C278000CEECA /* Kingfisher in Frameworks */,
-				5A73B0F6284F845D00E63F7D /* Reusable in Frameworks */,
 				6B01F678708419D11B872E70 /* Pods_PipocaMania.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -579,8 +575,6 @@
 			);
 			name = PipocaMania;
 			packageProductDependencies = (
-				5A73B0F5284F845D00E63F7D /* Reusable */,
-				12FB95252880C278000CEECA /* Kingfisher */,
 			);
 			productName = PipocaMania;
 			productReference = 5A8ACEBE284026700018E385 /* PipocaMania.app */;
@@ -602,7 +596,7 @@
 				};
 			};
 			buildConfigurationList = 5A8ACEB9284026700018E385 /* Build configuration list for PBXProject "PipocaMania" */;
-			compatibilityVersion = "Xcode 13.0";
+			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -976,19 +970,6 @@
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		12FB95252880C278000CEECA /* Kingfisher */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 12FB95242880C278000CEECA /* XCRemoteSwiftPackageReference "Kingfisher" */;
-			productName = Kingfisher;
-		};
-		5A73B0F5284F845D00E63F7D /* Reusable */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 5A73B0F4284F845D00E63F7D /* XCRemoteSwiftPackageReference "Reusable" */;
-			productName = Reusable;
-		};
-/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		12D664012873830800FCF6B1 /* FilmeModelData.xcdatamodeld */ = {

@@ -28,6 +28,8 @@ class FavoritsViewController: UIViewController {
         tableView.reloadData()
     }
     
+    func deleteFavorite(movie: Filme) { coreData.delete(movie: movie) }
+    
     func fetchFavorites(){
         coreData.requestFavorites { (favorites: Result<[Filme], Error>) in
             switch favorites {
@@ -65,14 +67,19 @@ extension FavoritsViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-           // Make the first row larger to accommodate a custom cell.
         if filmesFavoritos.isEmpty {
-              return 80
-           }
-
-           // Use the default size for all other rows.
-           return 240
-
+            return 80
+        }
+        
+        return 240
+        
     }
     
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            
+            self.deleteFavorite(movie: filmesFavoritos[indexPath.row])
+            tableView.reloadData()
+        }
+    }
 }

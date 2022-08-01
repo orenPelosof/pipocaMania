@@ -11,6 +11,8 @@ target 'PipocaMania' do
         pod 'GoogleSignIn'
         pod 'FacebookCore'
         pod 'FacebookLogin'
+	pod 'Kingfisher'
+	pod 'Reusable'
 
 end
 

@@ -44,13 +44,14 @@ class HomeViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        navigationController?.navigationBar.isHidden = true
+        self.navigationController?.navigationBar.isHidden = true
         viewModel.fetchCoreData()
+        CollectionView.reloadData()
     }
     
     
     override func viewDidDisappear(_ animated: Bool) {super.viewDidDisappear(animated)
-        navigationController?.navigationBar.isHidden = false
+        self.navigationController?.navigationBar.isHidden = false
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
